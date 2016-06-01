@@ -1,0 +1,83 @@
+<dom-module id="layout-page">
+  <template>
+
+    <style include="shared-styles">
+      :host {
+        display: block;
+        background: var(--paper-teal-300);
+        @apply(--layout-fit);
+      }
+      .container {
+        @apply(--layout-vertical);
+        @appy(--layout-center-center);
+        width: 760px;
+        max-width: 100%;
+        margin: 5% auto;
+      }
+
+      paper-material {
+        background-color: #fff;
+        height: 100%;
+        margin: 0 24px;
+        padding: 24px;
+      }
+      
+      paper-toolbar {
+        --paper-toolbar-background: var(--paper-teal-500);
+      }
+      paper-toolbar iron-image {
+        margin: 0 64px 0 32px;
+      }
+      paper-toolbar paper-tabs {
+        width: 400px;
+        height: 100%;
+        text-transform: uppercase;
+      }
+
+    </style>
+
+    <paper-toolbar mode="seamed">
+      <iron-image style="width:44px; height:44px;" src="../../images/logo-w.png" sizing="contain"></iron-image>
+      <paper-tabs selected="{{route}}" class="self-end">
+        <paper-tab>Home</paper-tab>
+        <paper-tab>Events</paper-tab>
+        <paper-tab>Blog</paper-tab>
+        <paper-tab>Partners</paper-tab>
+      </paper-tabs>
+    </paper-toolbar>
+
+    <div class="container">
+
+      <neon-animated-pages selected="[[route]]">
+        <paper-material elevation="2">
+          <p class="paper-font-headline">Home</p>
+        </paper-material>
+        <paper-material elevation="2">
+          <p class="paper-font-headline">Events</p>
+        </paper-material>
+        <paper-material elevation="2">
+          <p class="paper-font-headline">Blog</p>
+        </paper-material>
+        <paper-material elevation="2">
+          <p class="paper-font-headline">Partners</p>
+        </paper-material>
+      </neon-animated-pages>
+
+
+    </div>
+  </template>
+
+  <script>
+      Polymer({
+        is: 'layout-page',
+
+        properties: {
+          route: {
+            type: Number,
+            value: 0
+          }
+        }
+
+      });
+  </script>
+</dom-module>

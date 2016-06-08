@@ -1,70 +1,270 @@
 <dom-module id="layout-page">
+<link rel="import" type="css" href="layout-page.css">
   <template>
+    
 
-    <style include="shared-styles">
-      :host {
-        display: block;
-        background: var(--paper-teal-300);
-        @apply(--layout-fit);
-      }
-      .container {
-        @apply(--layout-vertical);
-        @appy(--layout-center-center);
-        width: 760px;
-        max-width: 100%;
-        margin: 5% auto;
-      }
+  <paper-header-panel mode="standard">
 
-      paper-material {
-        background-color: #fff;
-        height: 100%;
-        margin: 0 24px;
-        padding: 24px;
-      }
-      
-      paper-toolbar {
-        --paper-toolbar-background: var(--paper-teal-500);
-      }
-      paper-toolbar iron-image {
-        margin: 0 64px 0 32px;
-      }
-      paper-toolbar paper-tabs {
-        width: 400px;
-        height: 100%;
-        text-transform: uppercase;
-      }
+  
+    <paper-toolbar class="medium-tall">
+      <div class="flex"></div>
+      <paper-menu-button horizontal-align="right">
+        <paper-icon-button icon="icons:more-horiz" class="dropdown-trigger"></paper-icon-button>
+        <paper-menu class="dropdown-content">
+          <paper-item><iron-icon src="../../images/google-plus-logo.svg" class="social-icons"></iron-icon>Google+</paper-item>
+          <paper-item><iron-icon src="../../images/github-logo.svg" class="social-icons"></iron-icon>Github</paper-item>
+          <paper-item><iron-icon src="../../images/slack-logo.svg" class="social-icons"></iron-icon>Slack</paper-item>
+        </paper-menu>
+      </paper-menu-button>
 
-    </style>
-
-    <paper-toolbar mode="seamed">
-      <iron-image style="width:44px; height:44px;" src="../../images/logo-w.png" sizing="contain"></iron-image>
-      <paper-tabs selected="{{route}}" class="self-end">
-        <paper-tab>Home</paper-tab>
-        <paper-tab>Events</paper-tab>
-        <paper-tab>Blog</paper-tab>
-        <paper-tab>Partners</paper-tab>
+      <iron-image style="width:200px; height:40px;" src="../../images/gdg-lg-w.png" sizing="contain" class="bottom"></iron-image>
+      <paper-tabs selected="{{route}}" class="self-end bottom" scrollable>
+        <paper-tab>
+          <iron-icon icon="icons:view-headline" ></iron-icon><!-- Home -->
+        </paper-tab>
+        <paper-tab>
+          <iron-icon icon="icons:event"></iron-icon><!-- Events -->
+        </paper-tab>
+        <paper-tab>
+          <iron-icon icon="social:people"></iron-icon><!-- Partners -->
+        </paper-tab>
+        <paper-tab>
+          <iron-icon icon="icons:info"></iron-icon><!-- About -->
+        </paper-tab>
+        <paper-tab>
+          <iron-icon icon="icons:lightbulb-outline"></iron-icon><!-- Spotlight -->
+        </paper-tab>
       </paper-tabs>
     </paper-toolbar>
 
-    <div class="container">
+    <div class="content">
+      <div class="gdg"><img src="../../images/logo.png" alt=""></div>
 
       <neon-animated-pages selected="[[route]]">
-        <paper-material elevation="2">
-          <p class="paper-font-headline">Home</p>
+
+
+
+      <!-- 
+          HOME 
+      -->
+        <paper-material elevation="3" class="home">
+          <div class="horizontal layout center">
+            <iron-icon icon="icons:view-headline" class="navigation-icon"></iron-icon>
+            <p class="paper-font-display1">Feed</p>
+          </div>
+          <hr>
+
+          <div class="blog-post">
+            <p class="paper-font-title">Title of the blog post</p>
+            <p class="paper-font-body2 text-post">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis rem suscipit voluptas soluta est temporibus hic vitae consequatur, at error obcaecati, nobis delectus quo, officia optio quia vel dolorem voluptates. Quisquam nulla placeat nostrum! Quibusdam tempora quisquam ducimus temporibus minima modi nam facilis, inventore voluptatem, eos sequi debitis dolorum porro.
+            </p>
+            <p class="paper-font-body1 read-more"><a href="#">Read more ...</a></p>
+          </div>
+          <hr class="separator">
+          <div class="blog-post">
+            <p class="paper-font-title">Title of the blog post</p>
+            <p class="paper-font-body2 text-post">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis rem suscipit voluptas soluta est temporibus hic vitae consequatur, at error obcaecati, nobis delectus quo, officia optio quia vel dolorem voluptates. Quisquam nulla placeat nostrum! Quibusdam tempora quisquam ducimus temporibus minima modi nam facilis, inventore voluptatem, eos sequi debitis dolorum porro.
+            </p>
+            <p class="paper-font-body1 read-more"><a href="#">Read more ...</a></p>
+          </div>
+
         </paper-material>
-        <paper-material elevation="2">
-          <p class="paper-font-headline">Events</p>
+
+
+
+
+
+      <!-- 
+          EVENTS 
+      -->
+
+
+        <paper-material elevation="3" class="events">
+          <div class="horizontal layout center">
+            <iron-icon icon="icons:event" class="navigation-icon"></iron-icon>
+            <p class="paper-font-display1">Events</p>
+          </div>
+          <hr>
+          <div class="vertical layout">
+
+            <paper-card heading="Introducing our new platform" class="active">
+              <paper-ripple></paper-ripple>
+              <div class="card-actions">
+                <span>April 22, 2017</span>
+              </div>
+            </paper-card>
+            <paper-card heading="Second but not least">
+              <paper-ripple></paper-ripple>
+              <div class="card-actions">
+                <span>March 19, 2017</span>
+              </div>
+            </paper-card>
+            <paper-card heading="Our first GDG liège event">
+              <paper-ripple></paper-ripple>
+              <div class="card-actions">
+                <span>March 19, 2017</span>
+              </div>
+            </paper-card>
+
+          </div>
         </paper-material>
-        <paper-material elevation="2">
-          <p class="paper-font-headline">Blog</p>
+
+      
+
+
+
+      <!-- 
+          PARTNERS 
+      -->
+
+        <paper-material elevation="3" class="partners">
+          <div class="horizontal layout center">
+            <iron-icon icon="social:people" class="navigation-icon"></iron-icon>
+            <p class="paper-font-display1">Partners</p>
+          </div>
+          <hr>
+          <div class="partner">
+            <img src="../../images/new-google-logo.png" alt="Google">
+            <div class="vertical layout">
+              <div class="paper-font-headline">Google</div>
+              <div class="paper-font-body1">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore impedit sed dignissimos voluptas explicabo consequuntur consequatur nam ipsum ad nemo, minima deleniti cum perspiciatis, reiciendis nobis, quos incidunt natus tempore.
+              </div>
+            </div>
+            <div>
+              <paper-button raised>Link</paper-button>
+            </div>
+          </div>
+          <div class="horizontal layout partner center">
+            <img src="../../images/google-developers.png" alt="">
+            <div class="vertical layout">
+              <div class="paper-font-headline">Google Developers</div>
+              <div class="paper-font-body1">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore impedit sed dignissimos voluptas explicabo consequuntur consequatur nam ipsum ad nemo, minima deleniti cum perspiciatis, reiciendis nobis, quos incidunt natus tempore.
+              </div>
+            </div>
+            <div>
+              <paper-button raised>Link</paper-button>
+            </div>
+          </div>
         </paper-material>
-        <paper-material elevation="2">
-          <p class="paper-font-headline">Partners</p>
+
+
+
+
+
+      <!-- 
+          ABOUT 
+      -->
+
+        <paper-material elevation="3">
+          <div class="horizontal layout center">
+            <iron-icon icon="icons:info" class="navigation-icon"></iron-icon>
+            <p class="paper-font-display1">About</p>
+          </div>
+          <hr>
+          <p class="paper-font-headline about">
+            Google Developers Group Liège is aiming to bring together the developer community while helping and supporting its members to achieve their goals through Google technologies. It is a place for learning about Google Technologies & Tools and networking with local companies and developers. Joins us and meet the coolest people in Liege!
+          </p>
+          <hr class="separator">
+          <p class="paper-font-headline speakers">Team</p>
+
+          <div class="team">
+            <div class="vertical layout center user">
+              <img src="http://placehold.it/100/100" alt="">
+              <div class="paper-font-title team-name">Kosta Tsamouras</div>
+              <div class="paper-font-body1 team-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis quo, ullam praesentium adipisci voluptatum non ab facilis asperiores! Ea eligendi, maxime officia voluptas facilis optio nemo error consectetur itaque nesciunt.</div>
+            </div>
+            <div class="vertical layout center user">
+              <img src="http://placehold.it/100/100" alt="">
+              <div class="paper-font-title team-name">Kosta Tsamouras</div>
+              <div class="paper-font-body1 team-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam in, suscipit expedita omnis officia explicabo modi sunt voluptate tempore quisquam delectus, laborum harum velit dolorem iste incidunt numquam aperiam itaque.</div>
+            </div>
+            <div class="vertical layout center user">
+              <img src="http://placehold.it/100/100" alt="">
+              <div class="paper-font-title team-name">Kosta Tsamouras</div>
+              <div class="paper-font-body1 team-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae ducimus quisquam possimus doloremque, vitae accusamus saepe aperiam sunt necessitatibus voluptate veniam quis dicta similique aliquid. Dolorem odit, dolores doloribus corporis.</div>
+            </div>
+
+          </div>
+
+
         </paper-material>
+
+
+
+
+      <!-- 
+          SPOTLIGHT
+      -->
+
+        <paper-material elevation="3">
+          <div class="horizontal layout center">
+            <iron-icon icon="icons:lightbulb-outline" class="navigation-icon"></iron-icon>
+            <p class="paper-font-display1">Spotlight</p>
+          </div>
+          <hr>
+          <p class="paper-font-headline about">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum ducimus, aliquam autem numquam. Excepturi mollitia quisquam recusandae velit eum, architecto illo voluptates quibusdam qui dolores, vitae non tempore delectus incidunt?
+          </p>
+          <div class="horizontal layout around-justified spotlight-items">
+            <div class="vertical layout center">
+              <img src="http://placehold.it/100/100" alt="">
+              <p class="paper-font-title">Lorem ipsum sit</p>
+            </div>
+            <div class="vertical layout center">
+              <img src="http://placehold.it/100/100" alt="">
+              <p class="paper-font-title">Lorem ipsum sit</p>
+            </div>
+          </div>
+          <hr class="separator">
+          <p class="paper-font-headline speakers">Speakers</p>
+          <div class="horizontal layout wrap center-center speakers-container">
+            <div class="vertical layout center">
+              <img src="http://placehold.it/100/100" alt="">
+              <p class="paper-font-title">Lorem ipsum sit</p>
+            </div>
+            <div class="vertical layout center">
+              <img src="http://placehold.it/100/100" alt="">
+              <p class="paper-font-title">Lorem ipsum sit</p>
+            </div>
+            <div class="vertical layout center">
+              <img src="http://placehold.it/100/100" alt="">
+              <p class="paper-font-title">Lorem ipsum sit</p>
+            </div>
+            <div class="vertical layout center">
+              <img src="http://placehold.it/100/100" alt="">
+              <p class="paper-font-title">Lorem ipsum sit</p>
+            </div>
+            <div class="vertical layout center">
+              <img src="http://placehold.it/100/100" alt="">
+              <p class="paper-font-title">Lorem ipsum sit</p>
+            </div>
+            <div class="vertical layout center">
+              <img src="http://placehold.it/100/100" alt="">
+              <p class="paper-font-title">Lorem ipsum sit</p>
+            </div>
+            <div class="vertical layout center">
+              <img src="http://placehold.it/100/100" alt="">
+              <p class="paper-font-title">Lorem ipsum sit</p>
+            </div>
+            <div class="vertical layout center">
+              <img src="http://placehold.it/100/100" alt="">
+              <p class="paper-font-title">Lorem ipsum sit</p>
+            </div>
+          </div>
+        </paper-material>
+
+
+
+
       </neon-animated-pages>
 
 
     </div>
+  </paper-header-panel>
   </template>
 
   <script>

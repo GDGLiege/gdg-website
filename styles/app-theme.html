@@ -50,167 +50,55 @@
     @apply(--layout-vertical);
   }
 
-  .space {
-    @apply(--layout-flex);
+  .social-icons {
+    margin: 0 20px 0 0;
   }
-
-
-  paper-tabs {
-    margin-left: 152px;
+  paper-menu-button paper-item {
+    width: 170px;
   }
-  paper-tabs paper-tab {
-    width: 120px;
+  .gdg {
+    position: fixed;
+    right: 1%;
+    bottom: 8px;
+    opacity: 0.33;
   }
-
-  #drawerToolbar {
-    color: var(--secondary-text-color);
-    background-color: var(--drawer-menu-color);
-    border-bottom: var(--drawer-toolbar-border-color);
+  .gdg img {
+    height: 100px;
   }
-
-  #drawerToolbar .menu-name {
-    @apply(--paper-font-title);
-  }
-
-  paper-scroll-header-panel {
-    height: 100%;
-  }
-
-  paper-menu {
-    --paper-menu-selected-item: {
-      color: var(--primary-color);
-    }
-
-    --paper-menu-focused-item-after: {
-      background: var(--primary-color);
-    }
-  }
-
-  paper-menu iron-icon {
-    margin-right: 33px;
-    opacity: 0.54;
-  }
-
-  paper-menu a {
-    @apply(--layout-horizontal);
-    @apply(--layout-center);
-
-    text-decoration: none;
-    color: var(--menu-link-color);
-    font-family: 'Roboto', 'Noto', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 24px;
-    min-height: 48px;
-    padding: 0 16px;
-  }
-
-  #mainToolbar.tall .app-name {
-    font-size: 40px;
-    font-weight: 300;
-    /* Required for main area's paper-scroll-header-panel custom condensing transformation */
-    -webkit-transform-origin: left center;
-    transform-origin: left center;
-  }
-
-  #mainToolbar .middle-container,
-  #mainToolbar .bottom-container {
-    @apply(--layout-horizontal);
-    @apply(--layout-center);
-  }
-
-  #mainToolbar .middle-container  {
-    height: 100%;
-    margin-left: 48px;
-  }
-
-  #mainToolbar:not(.tall) .middle-container {
-    font-size: 18px;
-    padding-bottom: 0;
-  }
-
-  #mainToolbar .bottom-container {
-    @apply(--paper-font-subhead);
-
-    margin-left: 48px;
-    /* Required for main area's paper-scroll-header-panel custom condensing transformation */
-    -webkit-transform-origin: left center;
-    transform-origin: left center;
-  }
-
-  /* Height of the scroll area */
   .content {
-    height: 900px;
+    @apply(--layout-vertical);
     width: 960px;
+    max-width: 100%;
     margin: 0 auto;
   }
-
-  section[data-route="home"] paper-material {
-    @apply(--paper-font-body2);
+  
+  paper-toolbar {
+    --paper-toolbar-background: var(--bg-color-toolbar-gdg);
+  }
+  paper-toolbar iron-image {
+    margin: 0 64px 0 32px;
+  }
+  paper-toolbar paper-tabs {
+    color: white;
+    @apply(--paper-font-button);
+    --paper-tabs-selection-bar-color: var(--accent-color);
+    width: 100%;
+  }
+  paper-toolbar paper-tab {
+    --paper-tab-ink: var(--accent-color);
+    padding-left: 44px;
+    padding-right: 44px;
   }
 
-  section[data-route="home"] paper-material .subhead {
-    @apply(--paper-font-subhead);
-  }
-
-  paper-material {
-    border-radius: 2px;
-    padding: 16px 0 16px 0;
-    width: calc(98.66% - 16px);
-    margin: 16px auto;
-    background: white;
-  }
-
-  #toast .toast-hide-button {
-    color: #eeff41;
-    margin: 10px;
-  }
-
-  section[tabindex="-1"]:focus { outline: none; }
-
-  /* Breakpoints */
-
-  /* Small */
-  @media (max-width: 600px) {
-
-    #drawer .paper-toolbar {
-      margin-left: 16px;
+  @media (max-width: 700px) {
+    paper-toolbar paper-tab {
+      padding-left: 12px;
+      padding-right: 12px;
     }
 
-    #mainToolbar.tall .app-name {
-      font-size: 24px;
-      font-weight: 400;
+    paper-toolbar iron-image {
+      margin: 0 0;
     }
-
-    paper-material {
-      --menu-container-display: none;
-      width: calc(97.33% - 32px);
-      padding-left: 16px;
-      padding-right: 16px;
-    }
-
-  }
-
-  /* Tablet+ */
-  @media (min-width: 601px) {
-
-    #drawer.paper-drawer-panel > [drawer] {
-      border-right: 1px solid rgba(0, 0, 0, 0.14);
-    }
-
-    iron-pages {
-      padding: 48px 62px;
-    }
-
-    paper-material {
-      width: calc(98% - 46px);
-      margin-bottom: 32px;
-      padding-left: 30px;
-      padding-right: 30px;
-    }
-
   }
 
   /* Material Design Adaptive Breakpoints */

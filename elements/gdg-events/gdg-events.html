@@ -1,0 +1,49 @@
+<dom-module id="gdg-events">
+  <link rel="import" type="css" href="gdg-events.css">
+  <template>
+    <!-- EVENTS -->
+    <paper-material elevation="3" class="events">
+      <div class="horizontal layout center">
+        <iron-icon icon="icons:event" class="navigation-icon"></iron-icon>
+        <p class="paper-font-display1">Events</p>
+      </div>
+      <hr>
+      <div class="vertical layout">
+
+        <paper-card heading="Introducing our new platform" class="active">
+          <paper-ripple></paper-ripple>
+          <div class="card-actions">
+            <span>April 22, 2017</span>
+          </div>
+        </paper-card>
+        <paper-card heading="Second but not least">
+          <paper-ripple></paper-ripple>
+          <div class="card-actions">
+            <span>March 19, 2017</span>
+          </div>
+        </paper-card>
+        <paper-card heading="Our first GDG liège event">
+          <paper-ripple></paper-ripple>
+          <div class="card-actions">
+            <span>March 19, 2017</span>
+          </div>
+        </paper-card>
+
+      </div>
+    </paper-material>
+  </template>
+
+  <script>
+      Polymer({
+        is: 'gdg-events',
+
+        properties: {
+          route: {
+            type: Number,
+            value: 0
+          }
+        }
+
+      });
+  </script>
+</dom-module>

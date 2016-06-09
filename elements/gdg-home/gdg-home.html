@@ -1,0 +1,44 @@
+<dom-module id="gdg-home">
+<link rel="import" type="css" href="gdg-home.css">
+  <template>
+    <!-- HOME -->
+    <paper-material elevation="3" class="home">
+      <div class="horizontal layout center">
+        <iron-icon icon="icons:view-headline" class="navigation-icon"></iron-icon>
+        <p class="paper-font-display1">Feed</p>
+      </div>
+      <hr>
+
+      <div class="blog-post">
+        <p class="paper-font-title">Title of the blog post</p>
+        <p class="paper-font-body2 text-post">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis rem suscipit voluptas soluta est temporibus hic vitae consequatur, at error obcaecati, nobis delectus quo, officia optio quia vel dolorem voluptates. Quisquam nulla placeat nostrum! Quibusdam tempora quisquam ducimus temporibus minima modi nam facilis, inventore voluptatem, eos sequi debitis dolorum porro.
+        </p>
+        <p class="paper-font-body1 read-more"><a href="#">Read more ...</a></p>
+      </div>
+      <hr class="separator">
+      <div class="blog-post">
+        <p class="paper-font-title">Title of the blog post</p>
+        <p class="paper-font-body2 text-post">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis rem suscipit voluptas soluta est temporibus hic vitae consequatur, at error obcaecati, nobis delectus quo, officia optio quia vel dolorem voluptates. Quisquam nulla placeat nostrum! Quibusdam tempora quisquam ducimus temporibus minima modi nam facilis, inventore voluptatem, eos sequi debitis dolorum porro.
+        </p>
+        <p class="paper-font-body1 read-more"><a href="#">Read more ...</a></p>
+      </div>
+
+    </paper-material>
+  </template>
+
+  <script>
+      Polymer({
+        is: 'gdg-home',
+
+        properties: {
+          route: {
+            type: Number,
+            value: 0
+          }
+        }
+
+      });
+  </script>
+</dom-module>

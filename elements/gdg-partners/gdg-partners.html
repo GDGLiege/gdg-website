@@ -1,0 +1,51 @@
+<dom-module id="gdg-partners">
+<link rel="import" type="css" href="gdg-partners.css">
+  <template>
+    <!-- PARTNERS -->
+    <paper-material elevation="3" class="partners">
+      <div class="horizontal layout center">
+        <iron-icon icon="social:people" class="navigation-icon"></iron-icon>
+        <p class="paper-font-display1">Partners</p>
+      </div>
+      <hr>
+      <div class="partner">
+        <img src="../../images/new-google-logo.png" alt="Google">
+        <div class="vertical layout">
+          <div class="paper-font-headline">Google</div>
+          <div class="paper-font-body1">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore impedit sed dignissimos voluptas explicabo consequuntur consequatur nam ipsum ad nemo, minima deleniti cum perspiciatis, reiciendis nobis, quos incidunt natus tempore.
+          </div>
+        </div>
+        <div>
+          <paper-button raised>Link</paper-button>
+        </div>
+      </div>
+      <div class="horizontal layout partner center">
+        <img src="../../images/google-developers.png" alt="">
+        <div class="vertical layout">
+          <div class="paper-font-headline">Google Developers</div>
+          <div class="paper-font-body1">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore impedit sed dignissimos voluptas explicabo consequuntur consequatur nam ipsum ad nemo, minima deleniti cum perspiciatis, reiciendis nobis, quos incidunt natus tempore.
+          </div>
+        </div>
+        <div>
+          <paper-button raised>Link</paper-button>
+        </div>
+      </div>
+    </paper-material>
+  </template>
+
+  <script>
+      Polymer({
+        is: 'gdg-partners',
+
+        properties: {
+          route: {
+            type: Number,
+            value: 0
+          }
+        }
+
+      });
+  </script>
+</dom-module>

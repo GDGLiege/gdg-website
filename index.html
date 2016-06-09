@@ -66,7 +66,51 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <template is="dom-bind" id="app">
 
-      <layout-page></layout-page>
+    <paper-header-panel mode="standard">
+
+  
+    <paper-toolbar class="medium-tall">
+      <div class="flex"></div>
+      <paper-menu-button horizontal-align="right">
+        <paper-icon-button icon="icons:more-horiz" class="dropdown-trigger"></paper-icon-button>
+        <paper-menu class="dropdown-content">
+          <paper-item><iron-icon src="../../images/google-plus-logo.svg" class="social-icons"></iron-icon>Google+</paper-item>
+          <paper-item><iron-icon src="../../images/github-logo.svg" class="social-icons"></iron-icon>Github</paper-item>
+          <paper-item><iron-icon src="../../images/slack-logo.svg" class="social-icons"></iron-icon>Slack</paper-item>
+        </paper-menu>
+      </paper-menu-button>
+
+      <iron-image style="width:200px; height:40px;" src="../../images/gdg-lg-w.png" sizing="contain" class="bottom"></iron-image>
+      <paper-tabs selected="{{route}}" class="self-end bottom" scrollable>
+        <paper-tab>
+          <iron-icon icon="icons:view-headline" ></iron-icon><!-- Home -->
+        </paper-tab>
+        <paper-tab>
+          <iron-icon icon="icons:event"></iron-icon><!-- Events -->
+        </paper-tab>
+        <paper-tab>
+          <iron-icon icon="social:people"></iron-icon><!-- Partners -->
+        </paper-tab>
+        <paper-tab>
+          <iron-icon icon="icons:info"></iron-icon><!-- About -->
+        </paper-tab>
+        <paper-tab>
+          <iron-icon icon="icons:lightbulb-outline"></iron-icon><!-- Spotlight -->
+        </paper-tab>
+      </paper-tabs>
+    </paper-toolbar>
+
+    <div class="content">
+      <div class="gdg"><img src="../../images/logo.png" alt=""></div>
+
+      <neon-animated-pages selected="[[route]]">
+        <gdg-home></gdg-home>
+        <gdg-events></gdg-events>
+        <gdg-partners></gdg-partners>
+        <gdg-about></gdg-about>
+        <gdg-spotlight></gdg-spotlight>
+      </neon-animated-pages>
+    </div>
 
   </template>
 

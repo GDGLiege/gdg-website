@@ -1,0 +1,50 @@
+<dom-module id="gdg-about">
+  <link rel="import" type="css" href="gdg-about.css">
+  <template>
+    <!-- ABOUT -->
+    <paper-material elevation="3">
+      <div class="horizontal layout center">
+        <iron-icon icon="icons:info" class="navigation-icon"></iron-icon>
+        <p class="paper-font-display1">About</p>
+      </div>
+      <hr>
+      <p class="paper-font-headline about">
+        Google Developers Group Liège is aiming to bring together the developer community while helping and supporting its members to achieve their goals through Google technologies. It is a place for learning about Google Technologies & Tools and networking with local companies and developers. Joins us and meet the coolest people in Liege!
+      </p>
+      <hr class="separator">
+      <p class="paper-font-headline speakers">Team</p>
+
+      <div class="team">
+        <div class="vertical layout center user">
+          <img src="http://placehold.it/100/100" alt="">
+          <div class="paper-font-title team-name">Kosta Tsamouras</div>
+          <div class="paper-font-body1 team-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis quo, ullam praesentium adipisci voluptatum non ab facilis asperiores! Ea eligendi, maxime officia voluptas facilis optio nemo error consectetur itaque nesciunt.</div>
+        </div>
+        <div class="vertical layout center user">
+          <img src="http://placehold.it/100/100" alt="">
+          <div class="paper-font-title team-name">Kosta Tsamouras</div>
+          <div class="paper-font-body1 team-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam in, suscipit expedita omnis officia explicabo modi sunt voluptate tempore quisquam delectus, laborum harum velit dolorem iste incidunt numquam aperiam itaque.</div>
+        </div>
+        <div class="vertical layout center user">
+          <img src="http://placehold.it/100/100" alt="">
+          <div class="paper-font-title team-name">Kosta Tsamouras</div>
+          <div class="paper-font-body1 team-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae ducimus quisquam possimus doloremque, vitae accusamus saepe aperiam sunt necessitatibus voluptate veniam quis dicta similique aliquid. Dolorem odit, dolores doloribus corporis.</div>
+        </div>
+      </div>
+    </paper-material>
+  </template>
+
+  <script>
+      Polymer({
+        is: 'gdg-about',
+
+        properties: {
+          route: {
+            type: Number,
+            value: 0
+          }
+        }
+
+      });
+  </script>
+</dom-module>

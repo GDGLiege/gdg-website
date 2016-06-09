@@ -15,8 +15,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <meta charset="utf-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="Polymer Starter Kit">
-  <title>Polymer Starter Kit</title>
+  <meta name="generator" content="Polymer">
+  <title>Google Developers Group - Liège</title>
 
   <!-- Place favicon.ico in the `app/` directory -->
 
@@ -81,20 +81,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       </paper-menu-button>
 
       <iron-image style="width:200px; height:40px;" src="../../images/gdg-lg-w.png" sizing="contain" class="bottom"></iron-image>
-      <paper-tabs selected="{{route}}" class="self-end bottom" scrollable>
-        <paper-tab>
-          <iron-icon icon="icons:view-headline" ></iron-icon><!-- Home -->
+      <paper-tabs selected="{{route}}" class="self-end bottom" attr-for-selected="data-route" scrollable>
+        <paper-tab data-route="home">
+          <iron-icon  icon="icons:view-headline" ></iron-icon><!-- Home -->
         </paper-tab>
-        <paper-tab>
+        <paper-tab data-route="events">
           <iron-icon icon="icons:event"></iron-icon><!-- Events -->
         </paper-tab>
-        <paper-tab>
+        <paper-tab data-route="partners">
           <iron-icon icon="social:people"></iron-icon><!-- Partners -->
         </paper-tab>
-        <paper-tab>
+        <paper-tab data-route="about">
           <iron-icon icon="icons:info"></iron-icon><!-- About -->
         </paper-tab>
-        <paper-tab>
+        <paper-tab data-route="spotlight">
           <iron-icon icon="icons:lightbulb-outline"></iron-icon><!-- Spotlight -->
         </paper-tab>
       </paper-tabs>
@@ -103,12 +103,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <div class="content">
       <div class="gdg"><img src="../../images/logo.png" alt=""></div>
 
-      <neon-animated-pages selected="[[route]]">
-        <gdg-home></gdg-home>
-        <gdg-events></gdg-events>
-        <gdg-partners></gdg-partners>
-        <gdg-about></gdg-about>
-        <gdg-spotlight></gdg-spotlight>
+      <neon-animated-pages selected="[[route]]" attr-for-selected="data-route">
+        <gdg-home data-route="home"></gdg-home>
+        <gdg-events data-route="events"></gdg-events>
+        <gdg-partners data-route="partners"></gdg-partners>
+        <gdg-about data-route="about"></gdg-about>
+        <gdg-spotlight data-route="spotlight"></gdg-spotlight>
       </neon-animated-pages>
     </div>
 

@@ -55,18 +55,7 @@
       .team > div {
         width: 33%;
       }
-    /* Home  */
-      .blog-post {
-        margin: 40px 0 40px;
-      }
-      .text-post {
-        font-weight: 400;
-        opacity: 0.87;
-        text-align: justify;      
-      }
-      .read-more {
 
-      }
   /* Small */
 @media (max-width: 700px) {
   paper-material {

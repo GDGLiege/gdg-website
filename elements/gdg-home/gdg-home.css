@@ -18,6 +18,19 @@ a {
 iron-image {
         margin: 0 64px 0 32px;
       }
+
+      /* Home  */
+      .blog-post {
+        margin: 40px 0 40px;
+      }
+      .text-post {
+        font-weight: 400;
+        opacity: 0.87;
+        text-align: justify;      
+      }
+      .read-more {
+
+      }
       
 paper-material {
   background-color: #fff;

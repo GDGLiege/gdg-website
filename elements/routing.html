@@ -21,56 +21,46 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       page.base(app.baseUrl.replace(/\/$/, ''));
     }
 
-    // Middleware
-    function scrollToTop(ctx, next) {
-      app.scrollPageToTop();
-      next();
-    }
-
-    function closeDrawer(ctx, next) {
-      app.closeDrawer();
-      next();
-    }
-
     function setFocus(selected){
       document.querySelector('section[data-route="' + selected + '"] .page-title').focus();
     }
 
     // Routes
-    page('*', scrollToTop, closeDrawer, function(ctx, next) {
+    page('*', function(ctx, next) {
       next();
     });
 
     page('/', function() {
       app.route = 'home';
-      setFocus(app.route);
     });
 
     page(app.baseUrl, function() {
       app.route = 'home';
-      setFocus(app.route);
     });
 
-    page('/users', function() {
-      app.route = 'users';
-      setFocus(app.route);
+    page('/events', function() {
+      app.route = 'events';
     });
 
-    page('/users/:name', function(data) {
-      app.route = 'user-info';
+    page('/events', function(data) {
+      app.route = 'events';
       app.params = data.params;
-      setFocus(app.route);
     });
 
-    page('/contact', function() {
-      app.route = 'contact';
-      setFocus(app.route);
+    page('/partners', function() {
+      app.route = 'partners';
+    });
+
+    page('/about', function() {
+      app.route = 'about';
+    });
+
+    page('/spotlight', function() {
+      app.route = 'spotlight';
     });
 
     // 404
     page('*', function() {
-      app.$.toast.text = 'Can\'t find: ' + window.location.href  + '. Redirected you to Home Page';
-      app.$.toast.show();
       page.redirect(app.baseUrl);
     });
 

@@ -3,6 +3,13 @@
   <style is="custom-style" include="iron-flex iron-positioning"></style>
   <template>
     <!-- EVENTS -->
+    <firebase-collection
+      order-by-child="height"
+      limit-to-first="3"
+      location="https://gdg-liege.firebaseio.com/events"
+      data="{{events}}"
+      log></firebase-collection>
+
     <paper-material elevation="3" class="events">
       <div class="horizontal layout center">
         <iron-icon icon="icons:event" class="navigation-icon"></iron-icon>
@@ -10,26 +17,14 @@
       </div>
       <hr>
       <div class="vertical layout">
-
-        <paper-card heading="Introducing our new platform" class="active">
-          <paper-ripple></paper-ripple>
-          <div class="card-actions">
-            <span>April 22, 2017</span>
-          </div>
-        </paper-card>
-        <paper-card heading="Second but not least">
-          <paper-ripple></paper-ripple>
-          <div class="card-actions">
-            <span>March 19, 2017</span>
-          </div>
-        </paper-card>
-        <paper-card heading="Our first GDG liège event">
-          <paper-ripple></paper-ripple>
-          <div class="card-actions">
-            <span>March 19, 2017</span>
-          </div>
-        </paper-card>
-
+        <template is="dom-repeat" items="{{events}}">
+          <paper-card heading="{{item.name}}" class$="{{item.state}}" on-tap="_openEvent">
+            <paper-ripple></paper-ripple>
+            <div class="card-actions">
+              <span>{{item.date}}</span>
+            </div>
+          </paper-card>
+        </template>
       </div>
     </paper-material>
   </template>
@@ -39,12 +34,21 @@
         is: 'gdg-events',
 
         properties: {
-          route: {
-            type: Number,
-            value: 0
-          }
-        }
+        },
 
+        _openEvent: function(e) {
+          window.open(e.model.item.link);
+        },
+
+        attached: function() {
+         // var firebase = this.$$("firebase-collection");
+         // var object = {
+         //  date: "Tuesday, 7 July 2015",
+         //  link: "https://www.facebook.com/events/1602374296682213/",
+         //  name: "Beer Coke & Code"
+         // }
+         // firebase.add(object);
+        }
       });
   </script>
 </dom-module>

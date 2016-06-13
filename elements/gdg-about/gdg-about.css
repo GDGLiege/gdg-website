@@ -25,6 +25,12 @@
         padding: 32px 56px;
       }
 
+      img {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+      }
+
       iron-image {
         margin: 0 64px 0 32px;
       }

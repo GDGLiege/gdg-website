@@ -41,6 +41,15 @@
         margin: 32px 0 64px;
       }
 
+      img {
+        height: 100px;
+        width: 100px;
+      }
+
+      img.speaker-image {
+        border-radius: 50%;
+      }
+
     
     /* Spotlight */
 

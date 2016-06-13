@@ -3,6 +3,12 @@
   <style is="custom-style" include="iron-flex iron-positioning iron-flex-alignment"></style>
   <template> 
     <!-- SPOTLIGHT -->
+    <firebase-collection
+      order-by-key
+      location="https://gdg-liege.firebaseio.com/spotlight"
+      data="{{speakers}}"
+      log></firebase-collection>
+
     <paper-material elevation="3">
       <div class="horizontal layout center">
         <iron-icon icon="icons:lightbulb-outline" class="navigation-icon"></iron-icon>
@@ -10,9 +16,9 @@
       </div>
       <hr>
       <p class="paper-font-headline about">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum ducimus, aliquam autem numquam. Excepturi mollitia quisquam recusandae velit eum, architecto illo voluptates quibusdam qui dolores, vitae non tempore delectus incidunt?
+        Here you can find all of our spotlight resources, choose if you want to either check upon one of our speakers tech talk or presentation, or if you want to learn more about a Startup who presented at one of our events!
       </p>
-      <div class="horizontal layout around-justified spotlight-items">
+      <!-- <div class="horizontal layout around-justified spotlight-items">
         <div class="vertical layout center">
           <img src="http://placehold.it/100/100" alt="">
           <p class="paper-font-title">Lorem ipsum sit</p>
@@ -21,42 +27,16 @@
           <img src="http://placehold.it/100/100" alt="">
           <p class="paper-font-title">Lorem ipsum sit</p>
         </div>
-      </div>
+      </div> -->
       <hr class="separator">
       <p class="paper-font-headline speakers">Speakers</p>
       <div class="horizontal layout wrap center-center speakers-container">
-        <div class="vertical layout center">
-          <img src="http://placehold.it/100/100" alt="">
-          <p class="paper-font-title">Lorem ipsum sit</p>
-        </div>
-        <div class="vertical layout center">
-          <img src="http://placehold.it/100/100" alt="">
-          <p class="paper-font-title">Lorem ipsum sit</p>
-        </div>
-        <div class="vertical layout center">
-          <img src="http://placehold.it/100/100" alt="">
-          <p class="paper-font-title">Lorem ipsum sit</p>
-        </div>
-        <div class="vertical layout center">
-          <img src="http://placehold.it/100/100" alt="">
-          <p class="paper-font-title">Lorem ipsum sit</p>
-        </div>
-        <div class="vertical layout center">
-          <img src="http://placehold.it/100/100" alt="">
-          <p class="paper-font-title">Lorem ipsum sit</p>
-        </div>
-        <div class="vertical layout center">
-          <img src="http://placehold.it/100/100" alt="">
-          <p class="paper-font-title">Lorem ipsum sit</p>
-        </div>
-        <div class="vertical layout center">
-          <img src="http://placehold.it/100/100" alt="">
-          <p class="paper-font-title">Lorem ipsum sit</p>
-        </div>
-        <div class="vertical layout center">
-          <img src="http://placehold.it/100/100" alt="">
-          <p class="paper-font-title">Lorem ipsum sit</p>
-        </div>
+        <template is="dom-repeat" items="{{speakers}}">
+          <div class="vertical layout center">
+            <img src="{{item.image}}" class="speaker-image" alt="">
+            <p class="paper-font-title">{{item.name}}</p>
+          </div>
+        </template>
       </div>
     </paper-material>
   </template>
@@ -70,6 +50,16 @@
             type: Number,
             value: 0
           }
+        },
+
+        attached: function() {
+         // var firebase = this.$$("firebase-collection");
+         // var object = {
+         //  image: "../../images/speakers/kevin.jpg",
+         //  link: "",
+         //  name: "Kevin Vanzandenberghe"
+         // }
+         // firebase.add(object);
         }
 
       });

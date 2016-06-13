@@ -3,6 +3,11 @@
   <style is="custom-style" include="iron-flex iron-positioning"></style>
   <template>
     <!-- HOME -->
+    <firebase-collection
+      location="https://gdg-liege.firebaseio.com/news"
+      data="{{news}}"
+      log></firebase-collection>
+
     <paper-material elevation="3" class="home">
       <div class="horizontal layout center">
         <iron-icon icon="icons:view-headline" class="navigation-icon"></iron-icon>
@@ -10,21 +15,16 @@
       </div>
       <hr>
 
-      <div class="blog-post">
-        <p class="paper-font-title">Title of the blog post</p>
-        <p class="paper-font-body2 text-post">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis rem suscipit voluptas soluta est temporibus hic vitae consequatur, at error obcaecati, nobis delectus quo, officia optio quia vel dolorem voluptates. Quisquam nulla placeat nostrum! Quibusdam tempora quisquam ducimus temporibus minima modi nam facilis, inventore voluptatem, eos sequi debitis dolorum porro.
-        </p>
-        <p class="paper-font-body1 read-more"><a href="#">Read more ...</a></p>
-      </div>
-      <hr class="separator">
-      <div class="blog-post">
-        <p class="paper-font-title">Title of the blog post</p>
-        <p class="paper-font-body2 text-post">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis rem suscipit voluptas soluta est temporibus hic vitae consequatur, at error obcaecati, nobis delectus quo, officia optio quia vel dolorem voluptates. Quisquam nulla placeat nostrum! Quibusdam tempora quisquam ducimus temporibus minima modi nam facilis, inventore voluptatem, eos sequi debitis dolorum porro.
-        </p>
-        <p class="paper-font-body1 read-more"><a href="#">Read more ...</a></p>
-      </div>
+      <template is="dom-repeat" items="{{news}}">
+        <div class="blog-post">
+          <p class="paper-font-title">{{item.title}}</p>
+          <p class="paper-font-body2 text-post">
+            {{item.text}}
+          </p>
+          <p class="paper-font-body1 read-more"><a href="{{item.link}}" target="a_blank">Read more ...</a></p>
+        </div>
+        <hr class="separator">
+      </template>
 
     </paper-material>
   </template>

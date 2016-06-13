@@ -3,36 +3,31 @@
   <style is="custom-style" include="iron-flex iron-positioning"></style>
   <template>
     <!-- PARTNERS -->
+    <firebase-collection
+      order-by-child="height"
+      limit-to-first="3"
+      location="https://gdg-liege.firebaseio.com/partners"
+      data="{{partners}}"
+      log></firebase-collection>
+
     <paper-material elevation="3" class="partners">
       <div class="horizontal layout center">
         <iron-icon icon="social:people" class="navigation-icon"></iron-icon>
         <p class="paper-font-display1">Partners</p>
       </div>
       <hr>
-      <div class="partner">
-        <img src="../../images/new-google-logo.png" alt="Google">
-        <div class="vertical layout">
-          <div class="paper-font-headline">Google</div>
-          <div class="paper-font-body1">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore impedit sed dignissimos voluptas explicabo consequuntur consequatur nam ipsum ad nemo, minima deleniti cum perspiciatis, reiciendis nobis, quos incidunt natus tempore.
+      <template is="dom-repeat" items="[[partners]]">
+        <div class="partner">
+          <img src="{{item.image}}" alt="Google">
+          <div class="vertical layout">
+            <div class="paper-font-headline">{{item.name}}</div>
+            <div class="paper-font-body1">{{item.description}}</div>
+          </div>
+          <div>
+            <paper-button raised>Link</paper-button>
           </div>
         </div>
-        <div>
-          <paper-button raised>Link</paper-button>
-        </div>
-      </div>
-      <div class="partner">
-        <img src="../../images/google-developers.png" alt="">
-        <div class="vertical layout">
-          <div class="paper-font-headline">Google Developers</div>
-          <div class="paper-font-body1">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore impedit sed dignissimos voluptas explicabo consequuntur consequatur nam ipsum ad nemo, minima deleniti cum perspiciatis, reiciendis nobis, quos incidunt natus tempore.
-          </div>
-        </div>
-        <div>
-          <paper-button raised>Link</paper-button>
-        </div>
-      </div>
+      </template>
     </paper-material>
   </template>
 
@@ -41,12 +36,17 @@
         is: 'gdg-partners',
 
         properties: {
-          route: {
-            type: Number,
-            value: 0
-          }
-        }
+        },
 
+        attached: function() {
+         // var firebase = this.$$("firebase-collection");
+         // var object = {
+         //  name: "Google Developers",
+         //  image: "../../images/google-developers.png",
+         //  description: "Lorem ipsum"
+         // }
+         // firebase.add(object);
+        }
       });
   </script>
 </dom-module>

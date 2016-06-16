@@ -49,10 +49,30 @@
         font-weight: 300;
         margin: 32px 0 64px;
       }
+      .team-headline {
+        text-transform: uppercase;
+        text-align: center;
+        color: var(--secondary-text-color);
+      }
       .team {
         margin: 64px 0 32px;
         @apply(--layout-horizontal);
         @apply(--layout-justified);
+      }
+      .team-name {
+        margin-top: 8px;
+      }
+      .team-title {
+        opacity: 0.7;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      .team-social {
+        text-align: center;
+      }
+      .team-social > paper-icon-button {
+        --paper-icon-button-ink-color: var(--accent-color);
+        margin: 8px 2px;
       }
       .team .user {
         text-align: justify;

@@ -30,11 +30,11 @@
       </div> -->
       <hr class="separator">
       <p class="paper-font-headline speakers">Speakers</p>
-      <div class="horizontal layout wrap center-center speakers-container">
+      <div class="horizontal layout wrap center-justified speakers-container">
         <template is="dom-repeat" items="{{speakers}}">
-          <div class="vertical layout center">
+          <div class="vertical layout center speaker">
             <img src="{{item.image}}" class="speaker-image" alt="">
-            <p class="paper-font-title">{{item.name}}</p>
+            <div class="paper-font-subhead speaker-name">{{item.name}}</div>
           </div>
         </template>
       </div>

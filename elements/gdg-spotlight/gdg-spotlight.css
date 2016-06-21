@@ -65,7 +65,15 @@
         margin: 64px 0 32px;
       }
       .speakers-container > div {
-        margin: 8px;
+        margin: 20px 0;
+      }
+      .speaker {
+        padding: 0 28px;
+        width: 124px;
+      }
+      .speaker-name {
+        margin-top: 8px;
+        text-align: center;
       }
 
 

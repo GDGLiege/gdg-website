@@ -1,0 +1,124 @@
+    :host {
+      display: block;
+      font-family: 'Rubik One', sans-serif;
+      background: var(--paper-grey-600);
+    }
+
+    hr {
+      height: 2px;
+      border: 0;
+      width: 25%;
+      background: white;
+      margin: 44px 0;
+      opacity: 0.22;
+    }
+
+    section.header {
+      background-color: white;
+    }
+
+    app-box {
+      height: 640px;
+    }
+    .first {
+      --app-box-background-front-layer: {
+        background-image: url(../../../images/background-news.jpg);
+        background-position: center;
+        padding-bottom: 120px;
+        margin-top: -20px;
+        height: 100%;
+      };
+    }
+    .second {
+      --app-box-background-front-layer: {
+        background-image: url(../../../images/background-news-end.jpg);
+        background-position: bottom;
+        padding-bottom: 120px;
+        margin-top: -20px;
+        height: 100%;
+      };
+    }
+    .third {
+      --app-box-background-front-layer: {
+        background-image: url(//app-layout-assets.appspot.com/assets/bg3.jpg);
+        background-position: bottom;
+        padding-bottom: 120px;
+        margin-top: -20px;
+        height: 100%;
+      };
+    }
+    .fourth {
+      --app-box-background-front-layer: {
+        background-image: url(//app-layout-assets.appspot.com/assets/bg4.jpg);
+        background-position: bottom;
+        padding-bottom: 120px;
+        margin-top: -20px;
+        height: 100%;
+      };
+    }
+
+    paper-button {
+      margin-bottom: 32px;
+      background: var(--paper-grey-400);
+      font-weight: 500;
+      color: var(--paper-grey-600);
+      padding-left: 12px;
+      padding-right: 12px;
+
+    }
+
+    article {
+      font-weight: 100;
+      max-width: 900px;
+      text-align: right;
+      margin: 100px auto;
+      padding: 0 20px;
+      position: relative;
+    }
+    .content article {
+      text-align: left;
+    }
+
+    .content article h3 {
+      margin: 0;
+      color: white;
+      font-size: 36px;
+      font-weight: 300;
+      line-height: 60px;
+    }
+    .content article p {
+      font-size: 20px;
+      color: white;
+      opacity: 0.7;
+      margin-bottom: 40px;
+      text-align: justify;
+    }
+    article h2 {
+      font-weight: 400;
+      font-size: 50px;
+      line-height: 60px;
+      margin: 0;
+      text-transform: uppercase;
+      color: var(--paper-grey-600);
+    }
+    article p {
+      margin: 0;
+      font-size: 28px;
+      line-height: 30px;
+      letter-spacing: 0.7px;
+      font-family: 'Arvo', sans-serif;
+      color: var(--secondary-text-color);
+    }
+    article p span {
+      color: var(--paper-grey-600);
+      opacity: 0.87;
+    }
+    article iron-icon {
+      position: absolute;
+      right: -120px;
+
+      top: -75%;
+      height: 240px;
+      width: 240px;
+      opacity: 0.06;
+    }

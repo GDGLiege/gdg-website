@@ -1,0 +1,97 @@
+
+
+<dom-module id="gdg-body-events">
+  <link rel="import" type="css" href="gdg-body-events.css"/>
+  <template>
+
+
+    <section class="header">
+      <article>
+        <h2>Events</h2>
+        <p>Stay updated about our <span>events</span>.</p>
+        <iron-icon icon="icons:face"></iron-icon>
+      </article>
+
+
+        <!-- 
+          app-box allows to style the mixin `--app-box-background-front-layer` or create a custom background in the light DOM.
+          In this case, we create a custom background by adding the attribute `background` to the `img` in 
+          the light DOM.
+        -->
+        <app-box class="first" effects="parallax-background"></app-box>
+
+    </section>
+
+    <section class="content">
+      <article>
+
+        <h2>Upcoming:</h2>
+        <paper-card class="rate" elevation="2">
+          <div class="rate-content">
+            <div class="card-content">
+              <div class="rate-header">Devfest Belgium 2016</div>
+              <div class="rate-name">@ Brussels</div>
+              <div>Upcoming Devfest in Brussels will take place the 22 & 23 October 2016.</div>
+            </div>
+            <div class="card-actions end-justified horizontal layout">
+              <paper-icon-button class="rate-icon" icon="social:share"></paper-icon-button>
+            </div>
+          </div>
+          <div class="rate-image"></div>
+        </paper-card>
+        <paper-card class="rate" elevation="2">
+          <div class="rate-content">
+            <div class="card-content">
+              <div class="rate-header">Devfest Belgium 2016</div>
+              <div class="rate-name">@ Brussels</div>
+              <div>Upcoming Devfest in Brussels will take place the 22 & 23 October 2016.</div>
+            </div>
+            <div class="card-actions end-justified horizontal layout">
+              <paper-icon-button class="rate-icon" icon="social:share"></paper-icon-button>
+            </div>
+          </div>
+          <div class="rate-image"></div>
+        </paper-card>
+
+        <hr />
+
+        <h2>Past:</h2>
+        <paper-card class="rate" elevation="2">
+          <div class="rate-content">
+            <div class="card-content">
+              <div class="rate-header">Devfest Belgium 2016</div>
+              <div class="rate-name">@ Brussels</div>
+              <div>Upcoming Devfest in Brussels will take place the 22 & 23 October 2016.</div>
+            </div>
+            <div class="card-actions end-justified horizontal layout">  
+              <paper-icon-button class="rate-icon" icon="social:share"></paper-icon-button>
+            </div>
+          </div>
+          <div class="rate-image"></div>
+        </paper-card>
+
+        <hr />
+
+      </article>
+      <!-- 
+        This app-box uses the class `.second` and the mixin `--app-box-background-front-layer` to assign the background image. 
+      -->
+      <app-box class="second" effects="parallax-background"></app-box>
+    </section>
+
+
+
+
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'gdg-body-events',
+
+      });
+    })();
+  </script>
+</dom-module>

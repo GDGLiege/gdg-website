@@ -1,0 +1,122 @@
+
+
+<dom-module id="gdg-body-spotlight">
+  <link rel="import" type="css" href="gdg-body-spotlight.css"/>
+  <template>
+
+    <section class="header">
+      <article>
+        <h2>Spotlight</h2>
+        <p>Explore our available tools for your <span>projects</span>.</p>
+        <iron-icon icon="icons:lightbulb-outline"></iron-icon>
+      </article>
+
+        <!-- 
+          app-box allows to style the mixin `--app-box-background-front-layer` or create a custom background in the light DOM.
+          In this case, we create a custom background by adding the attribute `background` to the `img` in 
+          the light DOM.
+        -->
+        <app-box class="first" effects="parallax-background"></app-box>
+
+    </section>
+
+    <section class="content">
+      <article>
+        <p>Here you can find all of our spotlight resources, choose if you want to either check upon one of our speakers tech talk or presentation, or if you want to learn more about a Startup who presented at one of our events!</p>
+        <hr />
+        <h2>Speakers:</h2>
+        <div class="horizontal layout wrap justified speakers">
+
+          <div class="vertical layout center">
+            <iron-image preload fade sizing="cover" id="example-sizing-cover" alt="The Polymer logo." src="https://gdg-liege.org/images/team/samuel.jpg"></iron-image>
+            <p>Samuel Cardillo</p>
+            <p class="speakers-title">Developers Relation</p>
+            <hr />
+          </div>
+          <div class="vertical layout center">
+            <iron-image preload fade sizing="cover" id="example-sizing-cover" alt="The Polymer logo." src="https://gdg-liege.org/images/team/kosta.jpg"></iron-image>
+            <p>Kosta Tsamouras</p>
+            <p class="speakers-title">Digital Strategy</p>
+            <hr />
+          </div>
+          <div class="vertical layout center">
+            <iron-image preload fade sizing="cover" id="example-sizing-cover" alt="The Polymer logo." src="https://gdg-liege.org/images/team/martin.jpg"></iron-image>
+            <p>Martin Renson</p>
+            <p class="speakers-title">Organizer</p>
+            <hr />
+          </div>
+          <div class="vertical layout center">
+            <iron-image preload fade sizing="cover" id="example-sizing-cover" alt="The Polymer logo." src="https://gdg-liege.org/images/team/samuel.jpg"></iron-image>
+            <p>Samuel Cardillo</p>
+            <p class="speakers-title">Developers Relation</p>
+            <hr />
+          </div>
+          <div class="vertical layout center">
+            <iron-image preload fade sizing="cover" id="example-sizing-cover" alt="The Polymer logo." src="https://gdg-liege.org/images/team/kosta.jpg"></iron-image>
+            <p>Kosta Tsamouras</p>
+            <p class="speakers-title">Digital Strategy</p>
+            <hr />
+          </div>
+          <div class="vertical layout center">
+            <iron-image preload fade sizing="cover" id="example-sizing-cover" alt="The Polymer logo." src="https://gdg-liege.org/images/team/martin.jpg"></iron-image>
+            <p>Martin Renson</p>
+            <p class="speakers-title">Organizer</p>
+            <hr />
+          </div>
+          <div class="vertical layout center">
+            <iron-image preload fade sizing="cover" id="example-sizing-cover" alt="The Polymer logo." src="https://gdg-liege.org/images/team/samuel.jpg"></iron-image>
+            <p>Samuel Cardillo</p>
+            <p class="speakers-title">Developers Relation</p>
+            <hr />
+          </div>
+          <div class="vertical layout center">
+            <iron-image preload fade sizing="cover" id="example-sizing-cover" alt="The Polymer logo." src="https://gdg-liege.org/images/team/kosta.jpg"></iron-image>
+            <p>Kosta Tsamouras</p>
+            <p class="speakers-title">Digital Strategy</p>
+            <hr />
+          </div>
+          <div class="vertical layout center">
+            <iron-image preload fade sizing="cover" id="example-sizing-cover" alt="The Polymer logo." src="https://gdg-liege.org/images/team/martin.jpg"></iron-image>
+            <p>Martin Renson</p>
+            <p class="speakers-title">Organizer</p>
+            <hr />
+          </div>
+
+        </div>
+        <hr />
+        <h2>Start-ups:</h2>
+        <p>Nothing yet! Come back later ...</p>
+        <hr />
+        <h2>Tools:</h2>
+        <p>Nothing yet! Come back later ...</p>
+      </article>
+      <!-- 
+        This app-box uses the class `.second` and the mixin `--app-box-background-front-layer` to assign the background image. 
+      -->
+      <app-box class="second" effects="parallax-background"></app-box>
+    </section>
+
+
+<!--     <section class="content">
+      <article>
+        <h2>Using Web Components</h2>
+        <p>Polymer leverages web components, a new set of standards designed to provide reusable components for the web.</p>
+      </article>
+      <app-box class="third" effects="parallax-background"></app-box>
+    </section>
+ -->
+
+
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'gdg-body-spotlight',
+
+      });
+    })();
+  </script>
+</dom-module>

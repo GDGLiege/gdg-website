@@ -1,0 +1,96 @@
+
+
+<dom-module id="gdg-body-about">
+  <link rel="import" type="css" href="gdg-body-about.css"/>
+  <template>
+
+
+    <section class="header">
+      <article>
+        <h2>About</h2>
+        <p>Learn a little <span>more</span> about us.</p>
+        <iron-icon icon="icons:face"></iron-icon>
+      </article>
+
+        <!-- 
+          app-box allows to style the mixin `--app-box-background-front-layer` or create a custom background in the light DOM.
+          In this case, we create a custom background by adding the attribute `background` to the `img` in 
+          the light DOM.
+        -->
+        <app-box class="first" effects="parallax-background"></app-box>
+
+    </section>
+
+    <section class="content">
+      <article>
+        <p>Google Developers Group Liège is aiming to bring together the developer community while helping and supporting its members to achieve their goals through Google technologies. It is a place for learning about Google Technologies & Tools and networking with local companies and developers. Joins us and meet the coolest people in Liege!</p>
+        <hr />
+
+        <h2>The team:</h2>
+        <div class="horizontal layout justified team">
+
+          <div class="vertical layout center">
+            <iron-image preload fade sizing="cover" id="example-sizing-cover" alt="The Polymer logo." src="https://gdg-liege.org/images/team/samuel.jpg"></iron-image>
+            <p>Samuel Cardillo</p>
+            <p class="team-title">Developers Relation</p>
+            <hr />
+            <div class="horizontal layout">
+              <paper-icon-button src="../../../images/facebook-logo-w.svg" class=""></paper-icon-button>
+              <paper-icon-button src="../../../images/github-logo-w.svg" class=""></paper-icon-button>
+              <paper-icon-button src="../../../images/google-plus-logo-w.svg" class=""></paper-icon-button>
+              <paper-icon-button src="../../../images/linkedin-logo-w.svg" class=""></paper-icon-button>
+              <paper-icon-button src="../../../images/slack-logo-w.svg" class=""></paper-icon-button>
+              <paper-icon-button src="../../../images/twitter-logo-w.svg" class=""></paper-icon-button>
+            </div>
+          </div>
+          <div class="vertical layout center">
+            <iron-image preload fade sizing="cover" id="example-sizing-cover" alt="The Polymer logo." src="https://gdg-liege.org/images/team/kosta.jpg"></iron-image>
+            <p>Kosta Tsamouras</p>
+            <p class="team-title">Digital Strategy</p>
+            <hr />
+            <div class="horizontal layout">
+              <paper-icon-button src="../../../images/facebook-logo-w.svg" class=""></paper-icon-button>
+              <paper-icon-button src="../../../images/github-logo-w.svg" class=""></paper-icon-button>
+              <paper-icon-button src="../../../images/google-plus-logo-w.svg" class=""></paper-icon-button>
+              <paper-icon-button src="../../../images/linkedin-logo-w.svg" class=""></paper-icon-button>
+              <paper-icon-button src="../../../images/slack-logo-w.svg" class=""></paper-icon-button>
+              <paper-icon-button src="../../../images/twitter-logo-w.svg" class=""></paper-icon-button>
+            </div>
+          </div>
+          <div class="vertical layout center">
+            <iron-image preload fade sizing="cover" id="example-sizing-cover" alt="The Polymer logo." src="https://gdg-liege.org/images/team/martin.jpg"></iron-image>
+            <p>Martin Renson</p>
+            <p class="team-title">Organizer</p>
+            <hr />
+            <div class="horizontal layout">
+              <paper-icon-button src="../../../images/facebook-logo-w.svg" class=""></paper-icon-button>
+              <paper-icon-button src="../../../images/github-logo-w.svg" class=""></paper-icon-button>
+              <paper-icon-button src="../../../images/google-plus-logo-w.svg" class=""></paper-icon-button>
+              <paper-icon-button src="../../../images/linkedin-logo-w.svg" class=""></paper-icon-button>
+              <paper-icon-button src="../../../images/slack-logo-w.svg" class=""></paper-icon-button>
+              <paper-icon-button src="../../../images/twitter-logo-w.svg" class=""></paper-icon-button>
+            </div>
+          </div>
+
+        </div>
+      </article>
+      <!-- 
+        This app-box uses the class `.second` and the mixin `--app-box-background-front-layer` to assign the background image. 
+      -->
+      <app-box class="second" effects="parallax-background"></app-box>
+    </section>  
+
+
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'gdg-body-about',
+
+      });
+    })();
+  </script>
+</dom-module>

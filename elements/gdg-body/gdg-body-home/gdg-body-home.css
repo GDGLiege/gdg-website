@@ -1,0 +1,77 @@
+      :host {
+        display: block;
+        font-family: 'Rubik One', sans-serif;
+
+      }
+      paper-ripple {
+        color: white;
+      }
+      .news paper-ripple {
+        color: var(--paper-grey-300);
+      }
+      .container:hover .title {
+        opacity: 1;
+      }
+      .spacer {
+        @apply(--layout-flex);
+      }
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        height: 100%;
+        color: white;
+        font-size: 48px;
+        cursor: pointer;
+      }
+
+      .container iron-icon {
+        --iron-icon-height: 196px;
+        --iron-icon-width: 196px;
+        --iron-icon-fill-color: black;
+        opacity: 0.09;
+      }
+      .title {
+        z-index: 1;
+        margin-right: -7%;
+        margin-bottom: 5%;
+        text-transform: uppercase;
+        @apply(--layout-self-end);
+        letter-spacing: 2px;
+        opacity: 0.54;
+      }
+      .news {
+        height: 250px;
+        background: #fafafa;
+      }
+      .news .title {
+        color: var(--disabled-text-color);
+      }
+
+      .events {
+        height: 250px;
+        background: #4C8CF5;
+      }
+      .events .title {
+        color: var(--paper-blue-100);
+      }
+      .partners {
+        height: 250px;
+        background: #119E59;
+      }
+      .partners .title {
+        color: var(--paper-green-100);
+      }
+      .about {
+        height: 250px;
+        background: #DD5044 ;
+      }
+      .about .title {
+        color: var(--paper-red-100);
+      }
+      .spotlight {
+        height: 250px;
+        background: #FFC209;
+      }
+      .spotlight .title {
+        color: var(--paper-yellow-100);
+      }

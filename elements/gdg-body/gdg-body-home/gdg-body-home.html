@@ -1,0 +1,60 @@
+
+
+<dom-module id="gdg-body-home">
+  <link rel="import" type="css" href="gdg-body-home.css"/>
+  <template>
+
+    <app-box class="news" on-click="_changePage">
+      
+      <div class="container horizontal layout center end-justified">
+        <div class="title">News</div>
+        <iron-icon icon="icons:view-headline"></iron-icon>
+        <paper-ripple></paper-ripple>
+      </div>
+
+    </app-box>
+    <app-box class="events">
+      <div class="container horizontal layout center end-justified">
+        <div class="title">Events</div>
+        <iron-icon icon="icons:perm-contact-calendar"></iron-icon>
+        <paper-ripple></paper-ripple>
+      </div>
+    </app-box>
+    <app-box class="partners">
+      <div class="container horizontal layout center end-justified">
+        <div class="title">Partners</div>
+        <iron-icon icon="social:people"></iron-icon>
+        <paper-ripple></paper-ripple>
+      </div>
+    </app-box>
+    <app-box class="about">
+      <div class="container horizontal layout center end-justified">
+        <div class="title">About</div>
+        <iron-icon icon="social:mood"></iron-icon>
+        <paper-ripple></paper-ripple>
+      </div>
+    </app-box>
+    <app-box class="spotlight">
+      <div class="container horizontal layout center end-justified">
+        <div class="title">Spotlight</div>
+        <iron-icon icon="icons:lightbulb-outline"></iron-icon>
+        <paper-ripple></paper-ripple>
+      </div>
+    </app-box>
+
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'gdg-body-home',
+
+        _changePage: function(e) {
+          console.dir(e);
+        }
+      });
+    })();
+  </script>
+</dom-module>

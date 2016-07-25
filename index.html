@@ -15,27 +15,29 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <meta charset="utf-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="Polymer">
-  <title>Google Developers Group - Liège</title>
+  <meta name="generator" content="Polymer Starter Kit">
+  <title>Polymer Starter Kit</title>
+
+  <!-- Place favicon.ico in the `app/` directory -->
 
   <!-- Chrome for Android theme color -->
-  <meta name="theme-color" content="#0EC6DC">
+  <meta name="theme-color" content="#2E3AA1">
 
   <!-- Web Application Manifest -->
   <link rel="manifest" href="manifest.json">
 
   <!-- Tile color for Win8 -->
-  <meta name="msapplication-TileColor" content="#0EC6DC">
+  <meta name="msapplication-TileColor" content="#3372DF">
 
   <!-- Add to homescreen for Chrome on Android -->
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="application-name" content="GDG Liège">
+  <meta name="application-name" content="PSK">
   <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
 
   <!-- Add to homescreen for Safari on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="GDG Liège">
+  <meta name="apple-mobile-web-app-title" content="Polymer Starter Kit">
   <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
 
   <!-- Tile icon for Win8 (144x144) -->
@@ -52,12 +54,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <!-- Because this project uses vulcanize this should be your only html import
        in this file. All other imports should go in elements.html -->
   <link rel="import" href="elements/elements.html">
-  <link rel="publisher" href="https://plus.gogle.com/+GdgLiegeOrg">
-  <link rel="icon" type="image/png" href="favicon.png">
-
+  <link href="https://fonts.googleapis.com/css?family=Rubik+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
   <!-- For shared styles, shared-styles.html import in elements.html -->
   <style is="custom-style" include="shared-styles"></style>
-  <style is="custom-style" include="iron-flex iron-positioning iron-flex-alignment"></style>
 </head>
 
 <body unresolved>
@@ -67,51 +67,26 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <template is="dom-bind" id="app">
 
-    <paper-header-panel mode="standard">
 
-  
-    <paper-toolbar class="medium-tall">
-      <div class="flex"></div>
-      <paper-menu-button horizontal-align="right">
-        <paper-icon-button icon="icons:more-horiz" class="dropdown-trigger"></paper-icon-button>
-        <paper-menu class="dropdown-content">
-          <a href="https://plus.google.com/b/104804677303572987610/104804677303572987610" target="_blank"><paper-item><iron-icon src="../../images/google-plus-logo.svg" class="social-icons"></iron-icon>Google+</paper-item></a>
-          <a href="https://github.com/GDGLiege" target="_blank"><paper-item><iron-icon src="../../images/github-logo.svg" class="social-icons"></iron-icon>Github</paper-item></a>
-          <a href="http://goo.gl/forms/jluRvT2gkx" target="_blank"><paper-item><iron-icon src="../../images/slack-logo.svg" class="social-icons"></iron-icon>Slack</paper-item></a>
-        </paper-menu>
-      </paper-menu-button>
 
-      <iron-image style="width:200px; height:40px;" src="../../images/gdg-lg-w.png" sizing="contain" class="bottom"></iron-image>
-      <paper-tabs selected="{{route}}" class="self-end bottom" attr-for-selected="data-route" scrollable>
-        <paper-tab data-route="home">
-          <iron-icon  icon="icons:view-headline" ></iron-icon><!-- Home -->
-        </paper-tab>
-        <paper-tab data-route="events">
-          <iron-icon icon="icons:event"></iron-icon><!-- Events -->
-        </paper-tab>
-        <paper-tab data-route="partners">
-          <iron-icon icon="social:people"></iron-icon><!-- Partners -->
-        </paper-tab>
-        <paper-tab data-route="about">
-          <iron-icon icon="icons:info"></iron-icon><!-- About -->
-        </paper-tab>
-        <paper-tab data-route="spotlight">
-          <iron-icon icon="icons:lightbulb-outline"></iron-icon><!-- Spotlight -->
-        </paper-tab>
-      </paper-tabs>
-    </paper-toolbar>
+    
+    <app-header-layout>
+      <app-header reveals effects="waterfall">
+        <gdg-header></gdg-header>
+      </app-header>
 
-    <div class="content">
-      <div class="gdg"><img src="../../images/logo.png" alt=""></div>
+      <iron-pages selected="[[route]]" attr-for-selected="data-route">
+        <gdg-body-home data-route="home"></gdg-body-home> 
+        <gdg-body-news data-route="news"></gdg-body-news>
+        <gdg-body-events data-route="events"></gdg-body-events>
+        <gdg-body-about data-route="about"></gdg-body-about>
+        <gdg-body-spotlight data-route="spotlight"></gdg-body-spotlight>
+        <gdg-body-partners data-route="partners"></gdg-body-partners>
+      </iron-pages>
+      
+    </app-header-layout>    
 
-      <neon-animated-pages selected="[[route]]" attr-for-selected="data-route">
-        <gdg-home data-route="home"></gdg-home>
-        <gdg-events data-route="events"></gdg-events>
-        <gdg-partners data-route="partners"></gdg-partners>
-        <gdg-about data-route="about"></gdg-about>
-        <gdg-spotlight data-route="spotlight"></gdg-spotlight>
-      </neon-animated-pages>
-    </div>
+
 
   </template>
 

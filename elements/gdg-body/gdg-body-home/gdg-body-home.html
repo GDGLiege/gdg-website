@@ -4,7 +4,7 @@
   <link rel="import" type="css" href="gdg-body-home.css"/>
   <template>
 
-    <app-box class="news" on-click="_changePage">
+    <app-box class="news" on-click="_goToNews">
       
       <div class="container horizontal layout center end-justified">
         <div class="title">News</div>
@@ -13,28 +13,28 @@
       </div>
 
     </app-box>
-    <app-box class="events">
+    <app-box class="events" on-click="_goToEvents">
       <div class="container horizontal layout center end-justified">
         <div class="title">Events</div>
         <iron-icon icon="icons:perm-contact-calendar"></iron-icon>
         <paper-ripple></paper-ripple>
       </div>
     </app-box>
-    <app-box class="partners">
+    <app-box class="partners" on-click="_goToPartners">
       <div class="container horizontal layout center end-justified">
         <div class="title">Partners</div>
         <iron-icon icon="social:people"></iron-icon>
         <paper-ripple></paper-ripple>
       </div>
     </app-box>
-    <app-box class="about">
+    <app-box class="about" on-click="_goToAbout">
       <div class="container horizontal layout center end-justified">
         <div class="title">About</div>
         <iron-icon icon="social:mood"></iron-icon>
         <paper-ripple></paper-ripple>
       </div>
     </app-box>
-    <app-box class="spotlight">
+    <app-box class="spotlight" on-click="_goToSpotlight">
       <div class="container horizontal layout center end-justified">
         <div class="title">Spotlight</div>
         <iron-icon icon="icons:lightbulb-outline"></iron-icon>
@@ -51,9 +51,21 @@
       Polymer({
         is: 'gdg-body-home',
 
-        _changePage: function(e) {
-          console.dir(e);
-        }
+        _goToNews: function() {
+          page('/news');
+        },
+        _goToEvents: function() {
+          page('/events');
+        },
+        _goToPartners: function() {
+          page('/partners');
+        },
+        _goToAbout: function() {
+          page('/about');
+        },
+        _goToSpotlight: function() {
+          page('/spotlight');
+        },
       });
     })();
   </script>

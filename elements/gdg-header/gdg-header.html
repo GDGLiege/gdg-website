@@ -28,10 +28,22 @@
         width: 32px;
         --paper-icon-button-ink-color: grey;
       }
+      paper-icon-button.go-back {
+        height: 52px;
+        width: 52px;
+        margin-right: 40px;
+      }
     </style>
     <paper-toolbar class="medium-tall">
+
+      <template is="dom-bind" id="signal-message">
+        <template is="dom-if" if="{{detail}}">
+          <div><code>my-app</code> got a <code>{{detail}}</code> signal</div>
+        </template>
+      </template>
       
-      <img src="../../images/gdg-logo-4.png" alt="" class="">
+      <paper-icon-button icon="icons:arrow-back" class="go-back" on-click="_goToHome"></paper-icon-button>
+      <img src="../../images/gdg-logo-4.png" alt="">
       <div class="spacer "></div>
       <paper-icon-button src="../../images/facebook-logo.svg" class=""></paper-icon-button>
       <paper-icon-button src="../../images/github-logo.svg" class=""></paper-icon-button>
@@ -51,6 +63,9 @@
       Polymer({
         is: 'gdg-header',
 
+        _goToHome: function() {
+          page('/');
+        }
       });
     })();
   </script>

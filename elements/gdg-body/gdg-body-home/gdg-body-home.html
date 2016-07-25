@@ -53,6 +53,7 @@
 
         _goToNews: function() {
           page('/news');
+          this.fire('iron-signal', {name: 'hello', data: null});
         },
         _goToEvents: function() {
           page('/events');

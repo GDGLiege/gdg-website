@@ -1,0 +1,31 @@
+:host {
+  display: block;
+}
+.spacer {
+  @apply(--layout-flex);
+}
+span {
+  @apply(--paper-font-body1);
+}
+paper-toolbar {
+  color: var(--secondary-text-color);
+  --paper-toolbar-background: transparent;
+  padding-top: 30px;
+  margin: 0 auto;
+  max-width: 1080px;
+  /*border-bottom: 2px solid var(--paper-grey-200);*/
+}
+img {
+  width: 240px;
+}
+paper-icon-button {
+  margin: 0 12px;
+  height: 32px;
+  width: 32px;
+  --paper-icon-button-ink-color: grey;
+}
+paper-icon-button.go-back {
+  min-height: 52px;
+  min-width: 52px;
+  margin-right: 40px;
+}

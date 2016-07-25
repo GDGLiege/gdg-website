@@ -22,8 +22,8 @@
     }
     .first {
       --app-box-background-front-layer: {
-        background-image: url(../../../images/background-news.jpg);
-        background-position: center;
+        background-image: url(../../../images/background-news2.jpg);
+        background-position: top;
         padding-bottom: 120px;
         margin-top: -20px;
         height: 100%;

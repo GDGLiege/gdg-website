@@ -1,38 +1,9 @@
 
 <dom-module id="gdg-header">
+  <link rel="import" type="css" href="gdg-header.css"/>
   <template>
     <style>
-      :host {
-        display: block;
-      }
-      .spacer {
-        @apply(--layout-flex);
-      }
-      span {
-        @apply(--paper-font-body1);
-      }
-      paper-toolbar {
-        color: var(--secondary-text-color);
-        --paper-toolbar-background: transparent;
-        padding-top: 30px;
-        margin: 0 auto;
-        max-width: 1080px;
-        /*border-bottom: 2px solid var(--paper-grey-200);*/
-      }
-      img {
-        width: 240px;
-      }
-      paper-icon-button {
-        margin: 0 12px;
-        height: 32px;
-        width: 32px;
-        --paper-icon-button-ink-color: grey;
-      }
-      paper-icon-button.go-back {
-        height: 52px;
-        width: 52px;
-        margin-right: 40px;
-      }
+
     </style>
     <paper-toolbar class="medium-tall">
       <iron-signals on-iron-signal-page-changed="_pageChanged"></iron-signals>
@@ -41,12 +12,18 @@
       </template>
       <img src="../../images/gdg-logo-4.png" alt="">
       <div class="spacer "></div>
-      <paper-icon-button src="../../images/facebook-logo.svg" class=""></paper-icon-button>
-      <paper-icon-button src="../../images/github-logo.svg" class=""></paper-icon-button>
-      <paper-icon-button src="../../images/google-plus-logo.svg" class=""></paper-icon-button>
-      <paper-icon-button src="../../images/linkedin-logo.svg" class=""></paper-icon-button>
-      <paper-icon-button src="../../images/slack-logo.svg" class=""></paper-icon-button>
-      <paper-icon-button src="../../images/twitter-logo.svg" class=""></paper-icon-button>
+      <a href="https://github.com/GDGLiege" tabindex="-1" target="_blank">
+        <paper-icon-button src="../../images/github-logo.svg" class=""></paper-icon-button>
+      </a>
+      <a href="https://plus.google.com/b/104804677303572987610/104804677303572987610" tabindex="-1" target="_blank">
+        <paper-icon-button src="../../images/google-plus-logo.svg" class=""></paper-icon-button>
+      </a>
+      <a href="https://www.linkedin.com/company/google-developers-group---li%C3%A8ge" tabindex="-1" target="_blank">
+        <paper-icon-button src="../../images/linkedin-logo.svg" class=""></paper-icon-button>
+      </a>
+      <a href="http://goo.gl/forms/jluRvT2gkx" tabindex="-1" target="_blank">
+        <paper-icon-button src="../../images/slack-logo.svg" class=""></paper-icon-button>
+      </a>
     </paper-toolbar>
 
 

@@ -30,18 +30,23 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     });
     page('/events', function() {
       app.route = 'events';
+      app.fire('iron-signal', {name: 'page-changed'});
     });
     page('/news', function() {
       app.route = 'news';
+      app.fire('iron-signal', {name: 'page-changed'});
     });
     page('/partners', function() {
       app.route = 'partners';
+      app.fire('iron-signal', {name: 'page-changed'});
     });
     page('/about', function() {
       app.route = 'about';
+      app.fire('iron-signal', {name: 'page-changed'});
     });
     page('/spotlight', function() {
       app.route = 'spotlight';
+      app.fire('iron-signal', {name: 'page-changed'});
     });
     // 404
     page('*', function() {

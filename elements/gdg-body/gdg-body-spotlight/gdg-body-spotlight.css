@@ -111,8 +111,10 @@ article .speakers > div {
 article .speakers iron-image {
   width: 112px;
   height: 112px;
+  border-radius: 50%;
   --iron-image-placeholder: {
     background: #ffffff;
+    border-radius: 50%;
   };
 }
 article .speakers .speakers-title {

@@ -107,8 +107,10 @@ article iron-icon {
 article .team iron-image {
   width: 132px;
   height: 132px;
+  border-radius: 50%;
   --iron-image-placeholder: {
     background: #ffffff;
+    border-radius: 50%;
   };
 }
 article .team .team-title {

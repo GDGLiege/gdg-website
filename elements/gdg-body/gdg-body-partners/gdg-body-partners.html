@@ -4,6 +4,10 @@
   <link rel="import" type="css" href="gdg-body-partners.css"/>
   <style is="custom-style" include="shared-styles"></style>
   <template>
+    <firebase-collection
+      order-by-child="height"
+      location="https://gdg-liege.firebaseio.com/partners"
+      data="{{partners}}"></firebase-collection>
 
     <section class="header">
       <article>
@@ -23,16 +27,13 @@
 
     <section class="content">
       <article>
-        <iron-image preload fade sizing="contain" id="example-sizing-cover" alt="The Polymer logo." src="../../../images/google-logo-w.png"></iron-image>
-        <!-- <h2>Google</h2> -->
-        <p>Since the beginning, we’ve focused on providing the best user experience possible. Whether we’re designing a new Internet browser or a new tweak to the look of the homepage, we take great care to ensure that they will ultimately serve you, rather than our own internal goal or bottom line.</p>
-        <paper-button raised>Learn more</paper-button>
-        <hr />
-        <iron-image preload fade class="developers" sizing="contain" id="example-sizing-cover" alt="The Polymer logo." src="../../../images/google-developers-w.svg"></iron-image>
-        <!-- <h2>Google Developers</h2> -->
-        <p>Google Developers is the landing page for developers who are interested in Google’s developer technology; everything from the Android, Chrome, Drive, and Google Cloud platforms, to product APIs like the Cast API, Maps API, and YouTube API.</p>
-        <paper-button raised>Learn more</paper-button>
-        <hr />
+        <template is="dom-repeat" items="{{partners}}">
+          <iron-image preload fade sizing="contain" id="example-sizing-cover" src="{{item.image}}"></iron-image>
+          <!-- <h2>Google</h2> -->
+          <p>{{item.description}}</p>
+          <paper-button raised on-click="_openPartners">Learn more</paper-button>
+          <hr />
+        </template>
       </article>
       <!-- 
         This app-box uses the class `.second` and the mixin `--app-box-background-front-layer` to assign the background image. 
@@ -61,6 +62,10 @@
       Polymer({
         is: 'gdg-body-partners',
 
+        _openPartners: function(e) {
+          if(e.model.item.link == null) return;
+          window.open(e.model.item.link, '_blank');
+        },
       });
     })();
   </script>

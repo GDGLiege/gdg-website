@@ -4,6 +4,10 @@
   <link rel="import" type="css" href="gdg-body-events.css"/>
   <style is="custom-style" include="shared-styles"></style>
   <template>
+    <firebase-collection
+      order-by-child="height"
+      location="https://gdg-liege.firebaseio.com/events"
+      data="{{events}}"></firebase-collection>
 
     <section class="header">
       <article>
@@ -26,50 +30,42 @@
       <article>
 
         <h2>Upcoming:</h2>
-        <paper-card class="rate" elevation="2">
-          <div class="rate-content">
-            <div class="card-content">
-              <div class="rate-header">Devfest Belgium 2016</div>
-              <div class="rate-name">@ Brussels</div>
-              <div>17-18-19 October 2016</div>
+        <template is="dom-repeat" items="{{events}}" filter="_upcomingEvents">
+          <paper-card class="rate" elevation="2" on-click="_openEvent">
+            <div class="rate-content">
+              <div class="card-content">
+                <div class="rate-header">{{item.name}}</div>
+                <!-- <div class="rate-name">@ Brussels</div> -->
+                <div>{{item.date}}</div>
+              </div>
+              <div class="card-actions horizontal layout">
+                <div>{{item.description}}</div>
+                <!-- <paper-icon-button class="rate-icon" icon="social:share" disabled></paper-icon-button> -->
+              </div>
             </div>
-            <div class="card-actions horizontal layout">
-              <div>Upcoming Devfest in Brussels will take place the 22 & 23 October 2016.</div>
-              <!-- <paper-icon-button class="rate-icon" icon="social:share" disabled></paper-icon-button> -->
-            </div>
-          </div>
-          <div class="rate-image"></div>
-        </paper-card>
-        <paper-card class="rate" elevation="2">
-          <div class="rate-content">
-            <div class="card-content">
-              <div class="rate-header">Devfest Belgium 2016</div>
-              <div class="rate-name">@ Brussels</div>
-              <div>17-18-19 October 2016</div>
-            </div>
-            <div class="card-actions horizontal layout">
-              <div>Upcoming Devfest in Brussels will take place the 22 & 23 October 2016.</div>
-            </div>
-          </div>
-          <div class="rate-image"></div>
-        </paper-card>
+            <div class="rate-image"></div>
+          </paper-card>
+        </template>
 
         <hr />
 
         <h2>Past:</h2>
-        <paper-card class="rate" elevation="2">
-          <div class="rate-content">
-            <div class="card-content">
-              <div class="rate-header">Devfest Belgium 2016</div>
-              <div class="rate-name">@ Brussels</div>
-              <div>17-18-19 October 2016</div>
+        <template is="dom-repeat" items="{{events}}" filter="_pastEvents">
+          <paper-card class="rate" elevation="2" on-click="_openEvent">
+            <div class="rate-content">
+              <div class="card-content">
+                <div class="rate-header">{{item.name}}</div>
+                <!-- <div class="rate-name">@ Brussels</div> -->
+                <div>{{item.date}}</div>
+              </div>
+              <div class="card-actions horizontal layout">
+                <div>{{item.description}}</div>
+                <!-- <paper-icon-button class="rate-icon" icon="social:share" disabled></paper-icon-button> -->
+              </div>
             </div>
-            <div class="card-actions horizontal layout">  
-              <div>Upcoming Devfest in Brussels will take place the 22 & 23 October 2016.</div>
-            </div>
-          </div>
-          <div class="rate-image"></div>
-        </paper-card>
+            <div class="rate-image"></div>
+          </paper-card>
+        </template>
 
         <hr />
 
@@ -91,6 +87,18 @@
 
       Polymer({
         is: 'gdg-body-events',
+
+        _openEvent: function(e) {
+          if(e.model.item.link == null) return;
+          window.open(e.model.item.link, '_blank');
+        },
+
+        _upcomingEvents: function(e) {
+          if(e.state == "true") return e;
+        },
+        _pastEvents: function(e) {
+          if(e.state == "false") return e;
+        },
 
       });
     })();

@@ -4,6 +4,10 @@
   <link rel="import" type="css" href="gdg-body-spotlight.css"/>
   <style is="custom-style" include="shared-styles"></style>
   <template>
+    <firebase-collection
+      order-by-child="height"
+      location="https://gdg-liege.firebaseio.com/spotlight"
+      data="{{speakers}}"></firebase-collection>
 
     <section class="header">
       <article>
@@ -28,60 +32,14 @@
         <h2>Speakers:</h2>
         <div class="horizontal layout wrap justified speakers">
 
-          <div class="vertical layout center">
-            <iron-image preload fade sizing="cover" id="example-sizing-cover" alt="The Polymer logo." src="https://gdg-liege.org/images/team/samuel.jpg"></iron-image>
-            <p>Samuel Cardillo</p>
-            <p class="speakers-title">Developers Relation</p>
+        <template is="dom-repeat" items="{{speakers}}">
+          <div class="vertical layout center" on-click="_openSpeaker">
+            <iron-image preload fade sizing="cover" id="example-sizing-cover" alt="The Polymer logo." src="{{item.image}}"></iron-image>
+            <p>{{item.name}}</p>
+            <p class="speakers-title">{{item.title}}</p>
             <hr />
           </div>
-          <div class="vertical layout center">
-            <iron-image preload fade sizing="cover" id="example-sizing-cover" alt="The Polymer logo." src="https://gdg-liege.org/images/team/kosta.jpg"></iron-image>
-            <p>Kosta Tsamouras</p>
-            <p class="speakers-title">Digital Strategy</p>
-            <hr />
-          </div>
-          <div class="vertical layout center">
-            <iron-image preload fade sizing="cover" id="example-sizing-cover" alt="The Polymer logo." src="https://gdg-liege.org/images/team/martin.jpg"></iron-image>
-            <p>Martin Renson</p>
-            <p class="speakers-title">Organizer</p>
-            <hr />
-          </div>
-          <div class="vertical layout center">
-            <iron-image preload fade sizing="cover" id="example-sizing-cover" alt="The Polymer logo." src="https://gdg-liege.org/images/team/samuel.jpg"></iron-image>
-            <p>Samuel Cardillo</p>
-            <p class="speakers-title">Developers Relation</p>
-            <hr />
-          </div>
-          <div class="vertical layout center">
-            <iron-image preload fade sizing="cover" id="example-sizing-cover" alt="The Polymer logo." src="https://gdg-liege.org/images/team/kosta.jpg"></iron-image>
-            <p>Kosta Tsamouras</p>
-            <p class="speakers-title">Digital Strategy</p>
-            <hr />
-          </div>
-          <div class="vertical layout center">
-            <iron-image preload fade sizing="cover" id="example-sizing-cover" alt="The Polymer logo." src="https://gdg-liege.org/images/team/martin.jpg"></iron-image>
-            <p>Martin Renson</p>
-            <p class="speakers-title">Organizer</p>
-            <hr />
-          </div>
-          <div class="vertical layout center">
-            <iron-image preload fade sizing="cover" id="example-sizing-cover" alt="The Polymer logo." src="https://gdg-liege.org/images/team/samuel.jpg"></iron-image>
-            <p>Samuel Cardillo</p>
-            <p class="speakers-title">Developers Relation</p>
-            <hr />
-          </div>
-          <div class="vertical layout center">
-            <iron-image preload fade sizing="cover" id="example-sizing-cover" alt="The Polymer logo." src="https://gdg-liege.org/images/team/kosta.jpg"></iron-image>
-            <p>Kosta Tsamouras</p>
-            <p class="speakers-title">Digital Strategy</p>
-            <hr />
-          </div>
-          <div class="vertical layout center">
-            <iron-image preload fade sizing="cover" id="example-sizing-cover" alt="The Polymer logo." src="https://gdg-liege.org/images/team/martin.jpg"></iron-image>
-            <p>Martin Renson</p>
-            <p class="speakers-title">Organizer</p>
-            <hr />
-          </div>
+        </template>
 
         </div>
         <hr />
@@ -118,6 +76,10 @@
       Polymer({
         is: 'gdg-body-spotlight',
 
+        _openSpeaker: function(e) {
+          if(e.model.item.link == null) return;
+          window.open(e.model.item.link, '_blank');
+        },
       });
     })();
   </script>

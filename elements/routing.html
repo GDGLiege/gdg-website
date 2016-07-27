@@ -20,6 +20,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
     // Routes
     page('*', function(ctx, next) {
+      window.scrollTo(0, 0);
       next();
     });
     page('/', function() {

@@ -13,7 +13,7 @@
       <article>
         <h2>Partners</h2>
         <p>Find out who are <span>supporting</span> us.</p>
-        <iron-icon icon="social:people"></iron-icon>
+        <iron-icon icon="icons:group-work"></iron-icon>
       </article>
 
         <!-- 
@@ -28,7 +28,7 @@
     <section class="content">
       <article>
         <template is="dom-repeat" items="{{partners}}">
-          <iron-image preload fade sizing="contain" id="example-sizing-cover" src="{{item.image}}"></iron-image>
+          <iron-image preload fade sizing="contain" src="{{item.image}}"></iron-image>
           <!-- <h2>Google</h2> -->
           <p>{{item.description}}</p>
           <paper-button raised on-click="_openPartners">Learn more</paper-button>

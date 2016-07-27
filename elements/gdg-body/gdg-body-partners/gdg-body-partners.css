@@ -120,9 +120,9 @@ article iron-image {
     background: var(--paper-green-300);
   };
 }
-article iron-image.developers {
-  width: 125px;
-  height: 125px;
+.content article iron-image:nth-child(5)  {
+  width: 150px;
+  height: 150px;
 }
 
 @media all and (max-width: 600px) {

@@ -2,6 +2,7 @@
 
 <dom-module id="gdg-body-partners">
   <link rel="import" type="css" href="gdg-body-partners.css"/>
+  <style is="custom-style" include="shared-styles"></style>
   <template>
 
     <section class="header">
@@ -22,11 +23,13 @@
 
     <section class="content">
       <article>
-        <h2>Google</h2>
+        <iron-image preload fade sizing="contain" id="example-sizing-cover" alt="The Polymer logo." src="../../../images/google-logo-w.png"></iron-image>
+        <!-- <h2>Google</h2> -->
         <p>Since the beginning, we’ve focused on providing the best user experience possible. Whether we’re designing a new Internet browser or a new tweak to the look of the homepage, we take great care to ensure that they will ultimately serve you, rather than our own internal goal or bottom line.</p>
         <paper-button raised>Learn more</paper-button>
         <hr />
-        <h2>Google Developers</h2>
+        <iron-image preload fade class="developers" sizing="contain" id="example-sizing-cover" alt="The Polymer logo." src="../../../images/google-developers-w.svg"></iron-image>
+        <!-- <h2>Google Developers</h2> -->
         <p>Google Developers is the landing page for developers who are interested in Google’s developer technology; everything from the Android, Chrome, Drive, and Google Cloud platforms, to product APIs like the Cast API, Maps API, and YouTube API.</p>
         <paper-button raised>Learn more</paper-button>
         <hr />

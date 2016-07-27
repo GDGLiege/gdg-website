@@ -1,138 +1,149 @@
-    :host {
-      display: block;
-      font-family: 'Rubik One', sans-serif;
-      background: var(--gdg-liege-yellow);
-    }
-    hr {
-      height: 2px;
-      border: 0;
-      width: 25%;
-      background: white;
-      margin: 48px 0;
-      opacity: 0.22;
-    }
-    section.header {
-      background-color: white;
-    }
+:host {
+  display: block;
+  font-family: 'Rubik One', sans-serif;
+  background: var(--gdg-liege-yellow);
+}
+hr {
+  height: 2px;
+  border: 0;
+  width: 25%;
+  background: white;
+  margin: 48px 0;
+  opacity: 0.22;
+}
+section.header {
+  background-color: white;
+}
 
-    app-box {
-      height: 640px;
-    }
-    .first {
-      --app-box-background-front-layer: {
-        background-image: url(../../../images/background-spotlight.jpg);
-        background-position: center;
-        padding-bottom: 120px;
-        margin-top: -20px;
-        height: 100%;
-      };
-    }
-    .second {
-      --app-box-background-front-layer: {
-        background-image: url(../../../images/background-spotlight-end.jpg);
-        background-position: center;
-        padding-bottom: 120px;
-        margin-top: -20px;
-        height: 100%;
-      };
-    }
-    .third {
-      --app-box-background-front-layer: {
-        background-image: url(//app-layout-assets.appspot.com/assets/bg3.jpg);
-        background-position: bottom;
-        padding-bottom: 120px;
-        margin-top: -20px;
-        height: 100%;
-      };
-    }
-    .fourth {
-      --app-box-background-front-layer: {
-        background-image: url(//app-layout-assets.appspot.com/assets/bg4.jpg);
-        background-position: bottom;
-        padding-bottom: 120px;
-        margin-top: -20px;
-        height: 100%;
-      };
-    }
+app-box {
+  height: 640px;
+}
+.first {
+  --app-box-background-front-layer: {
+    background-image: url(../../../images/background-spotlight.jpg);
+    background-position: center;
+    padding-bottom: 120px;
+    margin-top: -20px;
+    height: 100%;
+  };
+}
+.second {
+  --app-box-background-front-layer: {
+    background-image: url(../../../images/background-spotlight-end.jpg);
+    background-position: center;
+    padding-bottom: 120px;
+    margin-top: -20px;
+    height: 100%;
+  };
+}
+.third {
+  --app-box-background-front-layer: {
+    background-image: url(//app-layout-assets.appspot.com/assets/bg3.jpg);
+    background-position: bottom;
+    padding-bottom: 120px;
+    margin-top: -20px;
+    height: 100%;
+  };
+}
+.fourth {
+  --app-box-background-front-layer: {
+    background-image: url(//app-layout-assets.appspot.com/assets/bg4.jpg);
+    background-position: bottom;
+    padding-bottom: 120px;
+    margin-top: -20px;
+    height: 100%;
+  };
+}
 
-    article {
-      font-weight: 100;
-      max-width: 900px;
-      text-align: right;
-      margin: 120px auto;
-      padding: 0 20px;
-      position: relative;
-    }
-    .content article {
-      text-align: left;
-    }
-    .content article h2 {
-      color: white;
-      margin-bottom: 64px;
-    }
-    .content article p {
-      color: white;
-      opacity: 0.7;
-      text-align: justify;
-    }
-    article h2 {
-      font-weight: 400;
-      font-size: 50px;
-      line-height: 60px;
-      margin: 0;
-      text-transform: uppercase;
-      color: var(--gdg-liege-yellow);
-    }
-    article p {
-      margin: 0;
-      font-size: 28px;
-      line-height: 30px;
-      letter-spacing: 0.7px;
-      font-family: 'Arvo', sans-serif;
-      color: var(--secondary-text-color);
-    }
-    article p span {
-      color: var(--gdg-liege-yellow);
-      opacity: 0.87;
-    }
-    article iron-icon {
-      position: absolute;
-      right: -120px;
+article {
+  font-weight: 100;
+  max-width: 900px;
+  text-align: right;
+  margin: 120px auto;
+  padding: 0 20px;
+  position: relative;
+}
+.content article {
+  text-align: left;
+}
+.content article h2 {
+  color: white;
+  margin-bottom: 64px;
+}
+.content article p {
+  color: white;
+  opacity: 0.7;
+  text-align: justify;
+}
+article h2 {
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 60px;
+  margin: 0;
+  text-transform: uppercase;
+  color: var(--gdg-liege-yellow);
+}
+article p {
+  margin: 0;
+  font-size: 28px;
+  line-height: 30px;
+  letter-spacing: 0.7px;
+  font-family: 'Arvo', sans-serif;
+  color: var(--secondary-text-color);
+}
+article p span {
+  color: var(--gdg-liege-yellow);
+  opacity: 0.87;
+}
+article iron-icon {
+  position: absolute;
+  right: -120px;
 
-      top: -75%;
-      height: 240px;
-      width: 240px;
-      opacity: 0.06;
-    }
+  top: -75%;
+  height: 240px;
+  width: 240px;
+  opacity: 0.06;
+}
 
-    article .speakers > div {
-      width: 25%;
-    }
-    article .speakers iron-image {
-      width: 112px;
-      height: 112px;
-      --iron-image-placeholder: {
-        background: #ffffff;
-      };
-    }
-    article .speakers .speakers-title {
-      margin: 0;
-      opacity: 0.7;
-      text-transform: uppercase;
-      font-weight: 300;
-      font-family: 'Rubik One', sans-serif;
-      font-size: 16px;
-      line-height: 16px;
-      text-align: center;
-    }
-    article .speakers p {
-      font-size: 16px;
-      color: white;
-      opacity: 1;
-      font-weight: 300;
-      margin: 24px 0 0;
+article .speakers > div {
+  width: 25%;
+}
+article .speakers iron-image {
+  width: 112px;
+  height: 112px;
+  --iron-image-placeholder: {
+    background: #ffffff;
+  };
+}
+article .speakers .speakers-title {
+  margin: 0;
+  opacity: 0.7;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-family: 'Rubik One', sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+}
+article .speakers p {
+  font-size: 16px;
+  color: white;
+  opacity: 1;
+  font-weight: 300;
+  margin: 24px 0 0;
 
-    }
-    article .speakers hr {
-      margin: 32px 0;
-    }
+}
+article .speakers hr {
+  margin: 32px 0;
+}
+
+@media (max-width: 600px) {
+  article .speakers > div {
+    width: 50%;
+  }
+  article .speakers p {
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 12px;
+  }
+}

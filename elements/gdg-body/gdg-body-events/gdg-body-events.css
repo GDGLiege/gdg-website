@@ -1,126 +1,136 @@
-    :host {
-      display: block;
-      font-family: 'Rubik One', sans-serif;
-      background: var(--gdg-liege-blue);
-    }
-    hr {
-      height: 2px;
-      border: 0;
-      width: 25%;
-      background: white;
-      margin: 48px 0;
-      opacity: 0.22;
-    }
-    section.header {
-      background-color: white;
-    }
+:host {
+  display: block;
+  font-family: 'Rubik One', sans-serif;
+  background: var(--gdg-liege-blue);
+}
+hr {
+  height: 2px;
+  border: 0;
+  width: 25%;
+  background: white;
+  margin: 48px 0;
+  opacity: 0.22;
+}
+section.header {
+  background-color: white;
+}
 
-    app-box {
-      height: 640px;
-    }
-    .first {
-      --app-box-background-front-layer: {
-        background-image: url(../../../images/background-events.jpg);
-        background-position: bottom;
-        padding-bottom: 120px;
-        margin-top: -20px;
-        height: 100%;
-      };
-    }
-    .second {
-      --app-box-background-front-layer: {
-        background-image: url(../../../images/background-events-end3.jpg);
-        background-position: center;
-        padding-bottom: 120px;
-        margin-top: -20px;
-        height: 100%;
-      };
-    }
-    .third {
-      --app-box-background-front-layer: {
-        background-image: url(//app-layout-assets.appspot.com/assets/bg3.jpg);
-        background-position: bottom;
-        padding-bottom: 120px;
-        margin-top: -20px;
-        height: 100%;
-      };
-    }
-    .fourth {
-      --app-box-background-front-layer: {
-        background-image: url(//app-layout-assets.appspot.com/assets/bg4.jpg);
-        background-position: bottom;
-        padding-bottom: 120px;
-        margin-top: -20px;
-        height: 100%;
-      };
-    }
+app-box {
+  height: 640px;
+}
+.first {
+  --app-box-background-front-layer: {
+    background-image: url(../../../images/background-events.jpg);
+    background-position: bottom;
+    padding-bottom: 120px;
+    margin-top: -20px;
+    height: 100%;
+  };
+}
+.second {
+  --app-box-background-front-layer: {
+    background-image: url(../../../images/background-events-end3.jpg);
+    background-position: center;
+    padding-bottom: 120px;
+    margin-top: -20px;
+    height: 100%;
+  };
+}
+.third {
+  --app-box-background-front-layer: {
+    background-image: url(//app-layout-assets.appspot.com/assets/bg3.jpg);
+    background-position: bottom;
+    padding-bottom: 120px;
+    margin-top: -20px;
+    height: 100%;
+  };
+}
+.fourth {
+  --app-box-background-front-layer: {
+    background-image: url(//app-layout-assets.appspot.com/assets/bg4.jpg);
+    background-position: bottom;
+    padding-bottom: 120px;
+    margin-top: -20px;
+    height: 100%;
+  };
+}
 
-    article {
-      font-weight: 100;
-      max-width: 900px;
-      text-align: right;
-      margin: 120px auto;
-      padding: 0 20px;
-      position: relative;
-    }
-    .content article {
-      text-align: left;
-    }
-    .content article h2 {
-      color: white;
-    }
-    .content article p {
-      color: var(--paper-blue-200);
-      
-    }
-    article h2 {
-      font-weight: 400;
-      font-size: 50px;
-      line-height: 60px;
-      margin: 0;
-      text-transform: uppercase;
-      color: var(--gdg-liege-blue);
-    }
-    article p {
-      margin: 0;
-      font-size: 28px;
-      line-height: 30px;
-      letter-spacing: 0.7px;
-      font-family: 'Arvo', sans-serif;
-      color: var(--secondary-text-color);
-    }
-    article p span {
-      color: var(--gdg-liege-blue);
-      opacity: 0.87;
-    }
-    article iron-icon {
-      position: absolute;
-      right: -120px;
+article {
+  font-weight: 100;
+  max-width: 900px;
+  text-align: right;
+  margin: 120px auto;
+  padding: 0 20px;
+  position: relative;
+}
+.content article {
+  text-align: left;
+}
+.content article h2 {
+  color: white;
+}
+.content article p {
+  color: var(--paper-blue-200);
+  
+}
+article h2 {
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 60px;
+  margin: 0;
+  text-transform: uppercase;
+  color: var(--gdg-liege-blue);
+}
+article p {
+  margin: 0;
+  font-size: 28px;
+  line-height: 30px;
+  letter-spacing: 0.7px;
+  font-family: 'Arvo', sans-serif;
+  color: var(--secondary-text-color);
+}
+article p span {
+  color: var(--gdg-liege-blue);
+  opacity: 0.87;
+}
+article iron-icon {
+  position: absolute;
+  right: -120px;
 
-      top: -75%;
-      height: 240px;
-      width: 240px;
-      opacity: 0.06;
-    }
+  top: -75%;
+  height: 240px;
+  width: 240px;
+  opacity: 0.06;
+}
 
 
-    paper-card.rate { 
-      @apply(--layout-horizontal); 
-      margin: 40px 0;
-    }
-    .rate-image {
-      width: 100px;
-      height: 180px;
-      background: url('http://lorempixel.com/500/500');
-      background-size: cover;
-    }
-    .rate-content {
-      @apply(--layout-flex);
-      float: left;
-    }
-    .rate-header { @apply(--paper-font-headline); }
-    .rate-name { color: var(--paper-grey-600); margin: 10px 0; }
-    paper-icon-button.rate-icon {
-      --iron-icon-fill-color: white;
-      --iron-icon-stroke-color: var(--paper-grey-600);
-    }    
+paper-card.rate { 
+  @apply(--layout-horizontal); 
+  margin: 40px 0;
+}
+paper-card .card-actions {
+  padding: 16px;
+}
+.rate-image {
+  width: 100px;
+  height: 180px;
+  background: url('http://lorempixel.com/500/500');
+  background-size: cover;
+}
+.rate-content {
+  @apply(--layout-flex);
+  float: left;
+}
+.rate-header { @apply(--paper-font-headline); }
+.rate-name { color: var(--paper-grey-600); margin: 10px 0; }
+paper-icon-button.rate-icon {
+  --iron-icon-fill-color: white;
+  --iron-icon-stroke-color: var(--paper-grey-600);
+}    
+
+
+@media (max-width: 600px) {
+  .rate-image {
+    height: 159px;
+  }
+}

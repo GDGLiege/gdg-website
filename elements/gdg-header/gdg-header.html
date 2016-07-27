@@ -2,28 +2,46 @@
 <dom-module id="gdg-header">
   <link rel="import" type="css" href="gdg-header.css"/>
   <template>
-    <style>
+    <iron-media-query query="(max-width: 600px)" query-matches="{{small}}"></iron-media-query>
 
-    </style>
     <paper-toolbar class="medium-tall">
       <iron-signals on-iron-signal-page-changed="_pageChanged"></iron-signals>
       <template is="dom-if" if="{{!_isHome}}">
         <paper-icon-button icon="icons:arrow-back" class="go-back" on-click="_goToHome"></paper-icon-button>
       </template>
-      <img src="../../images/gdg-logo-4.png" alt="">
-      <div class="spacer "></div>
-      <a href="https://github.com/GDGLiege" tabindex="-1" target="_blank">
-        <paper-icon-button src="../../images/github-logo.svg" class=""></paper-icon-button>
-      </a>
-      <a href="https://plus.google.com/b/104804677303572987610/104804677303572987610" tabindex="-1" target="_blank">
-        <paper-icon-button src="../../images/google-plus-logo.svg" class=""></paper-icon-button>
-      </a>
-      <a href="https://www.linkedin.com/company/google-developers-group---li%C3%A8ge" tabindex="-1" target="_blank">
-        <paper-icon-button src="../../images/linkedin-logo.svg" class=""></paper-icon-button>
-      </a>
-      <a href="http://goo.gl/forms/jluRvT2gkx" tabindex="-1" target="_blank">
-        <paper-icon-button src="../../images/slack-logo.svg" class=""></paper-icon-button>
-      </a>
+      <img src="../../images/gdg-logo-4.png" alt="gdg liège">
+
+      <!-- MOBILE -->
+      <template is="dom-if" if="{{small}}">
+        <div class="spacer"></div>
+          <paper-menu-button horizontal-align="right">
+            <paper-icon-button icon="icons:more-horiz" class="dropdown-trigger"></paper-icon-button>
+            <paper-menu class="dropdown-content">
+              <paper-item><iron-icon src="../../images/github-logo.svg"></iron-icon>Github</paper-item>
+              <paper-item><iron-icon src="../../images/google-plus-logo.svg"></iron-icon>Google+</paper-item>
+              <paper-item><iron-icon src="../../images/linkedin-logo.svg"></iron-icon>LinkedIn</paper-item>
+              <paper-item><iron-icon src="../../images/slack-logo.svg"></iron-icon>Slack</paper-item>
+            </paper-menu>
+          </paper-menu-button>
+      </template>
+
+      <!-- DESKTOP -->
+      <template is="dom-if" if="{{!small}}">
+        <div class="spacer"></div>
+        <a href="https://github.com/GDGLiege" tabindex="-1" target="_blank">
+          <paper-icon-button src="../../images/github-logo.svg" class=""></paper-icon-button>
+        </a>
+        <a href="https://plus.google.com/b/104804677303572987610/104804677303572987610" tabindex="-1" target="_blank">
+          <paper-icon-button src="../../images/google-plus-logo.svg" class=""></paper-icon-button>
+        </a>
+        <a href="https://www.linkedin.com/company/google-developers-group---li%C3%A8ge" tabindex="-1" target="_blank">
+          <paper-icon-button src="../../images/linkedin-logo.svg" class=""></paper-icon-button>
+        </a>
+        <a href="http://goo.gl/forms/jluRvT2gkx" tabindex="-1" target="_blank">
+          <paper-icon-button src="../../images/slack-logo.svg" class=""></paper-icon-button>
+        </a>
+      </template>
+
     </paper-toolbar>
 
 

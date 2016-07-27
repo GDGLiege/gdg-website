@@ -25,7 +25,38 @@ paper-icon-button {
   --paper-icon-button-ink-color: grey;
 }
 paper-icon-button.go-back {
-  min-height: 52px;
-  min-width: 52px;
+  min-height: 60px;
+  min-width: 60px;
   margin-right: 40px;
+  color: black;
+  opacity: 0.22;
 }
+paper-menu-button paper-item {
+  color: var(--secondary-text-color);
+  width: 132px;
+}
+paper-menu-button iron-icon {
+  margin-right: 16px;
+  width: 20px;
+  height: 20px;
+}
+
+@media all and (max-width: 600px) {
+ img {
+  width: 160px;
+ }
+ paper-icon-button {
+  color: var(--disabled-text-color);
+  margin: 0;
+  height: 40px;
+  width: 40px;
+ }
+ paper-icon-button.go-back {
+  min-height: 48px;
+  min-width: 48px;
+  margin-right: 20px;
+  color: black;
+  opacity: 0.22;
+ }
+}
+

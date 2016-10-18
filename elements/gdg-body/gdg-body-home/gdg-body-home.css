@@ -9,9 +9,7 @@ paper-ripple {
 .news paper-ripple {
   color: var(--paper-grey-300);
 }
-.container:hover .title {
-  opacity: 1;
-}
+
 .spacer {
   @apply(--layout-flex);
 }
@@ -36,15 +34,18 @@ paper-ripple {
   margin-bottom: 5%;
   text-transform: uppercase;
   @apply(--layout-self-end);
-  letter-spacing: 2px;
-  opacity: 0.54;
+  letter-spacing: 1.5px;
 }
+.news .container:hover .title {
+  color: var(--paper-grey-800);
+}
+
 .news {
   height: 250px;
   background: #fafafa;
 }
 .news .title {
-  color: var(--disabled-text-color);
+  color: var(--paper-grey-500);
 }
 
 .events {
@@ -52,28 +53,32 @@ paper-ripple {
   background: var(--gdg-liege-blue);
 }
 .events .title {
-  color: var(--paper-blue-100);
+  color: white;
+  opacity: 0.87;
 }
 .partners {
   height: 250px;
   background: var(--gdg-liege-green);
 }
 .partners .title {
-  color: var(--paper-green-100);
+  color: white;
+  opacity: 0.87;
 }
 .about {
   height: 250px;
   background: var(--gdg-liege-red) ;
 }
 .about .title {
-  color: var(--paper-red-100);
+  color: white;
+  opacity: 0.87;
 }
 .spotlight {
   height: 250px;
   background: var(--gdg-liege-yellow);
 }
 .spotlight .title {
-  color: var(--paper-yellow-100);
+  color: white;
+  opacity: 0.87;
 }
 
 

@@ -22,7 +22,7 @@ paper-icon-button {
   margin: 0 12px;
   height: 32px;
   width: 32px;
-  --paper-icon-button-ink-color: grey;
+  --paper-icon-button-ink-color: var(--paper-grey-400);
 }
 paper-icon-button.go-back {
   min-height: 60px;
